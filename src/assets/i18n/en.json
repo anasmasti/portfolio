@@ -1,0 +1,55 @@
+{
+  "nav" : {
+    "home":"Home",
+    "about":"About",
+    "skill":"Skills",
+    "project":"Projects",
+    "contact":"Contact"
+  },
+  "home" : {
+    "hello":"Hey,",
+    "mynameis":"My name is",
+    "im":"I'm",
+    "webdev":"Developer Web Full-Stack",
+    "homebtn":"know more about me"
+  },
+  "about" : {
+    "abouttitle":"About me",
+    "mynameis":"My name is",
+    "im":"I'm a",
+    "webdevdes":"Developer Web Full-Stack and Designer",
+    "pres1":"passionate about creating websites with ergonomic and responsive qualities that can be adapted to any device.",
+    "pres2":"I like to share my skills and knowledge with people who have the same passion.",
+    "pres3":"I'm so interested in the IT development sector, and very attracted to new technology.",
+    "aboutbtn":"see my skills"
+    },
+  "skill" : {
+    "skilltitle":"Skills",
+    "front":"Front-end",
+    "back":"Back-end",
+    "db":"Database",
+    "model":"Modeling",
+    "graph":"Graphic Design",
+    "bureautique":"Office Automation",
+    "version":"Version Management",
+    "skillbtn":"see my projects"
+    },
+  "project" : {
+    "projecttitle":"Some Projects",
+    "rcoz":"Responsive Website",
+    "mediexperts":"Administrative Web Application",
+    "matiplas":"Responsive Website",
+    "mysys":"Responsive Website with Dashboard",
+    "copra":"E-Commerce Web Application",
+    "ps":"Mobile Applications",
+    "projbtn":"contacte me"
+    },
+  "contact" : {
+    "contacttitle":"Contact",
+    "msg":"Hi Anas I saw your portfolio, i want to tell you that "
+    },
+  "modal" : {
+    "text":"Coming Soon.",
+    "btnmodal":"close"
+  }
+}

@@ -1,0 +1,61 @@
+<h1 class="font_bold d-inline myh1">{{'project.projecttitle' | translate}}</h1>
+<a [routerLink]="['/contact']" class="btn bg-transparent text-light myBtn font_bold mr-5 mb-4 font_small float-right forDesktop ">{{'project.projbtn' | translate}} </a>
+
+<section class="hero-section my-4 pr-5 ">
+  <div class="card-grid">
+    <a href="#" class="mycard" data-bs-toggle="modal" data-bs-target="#myModel">
+      <div class="card__background" style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/rcoz.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">Rapide Club d'Oued-Zem</p>
+        <h3 class="card__heading">{{'project.rcoz' | translate}}</h3>
+      </div>
+    </a>
+    <a href="#" class="mycard" data-bs-toggle="modal" data-bs-target="#myModel">
+      <div class="card__background" style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/mediexperts.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">Mediexperts</p>
+        <h3 class="card__heading">{{'project.mediexperts' | translate}}</h3>
+      </div>
+    </a>
+    <a class="mycard" target="_blank" href="http://matiplas.ma">
+      <div class="card__background" style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/matiplas.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">Matiplas</p>
+        <h3 class="card__heading">{{'project.matiplas' | translate}}</h3>
+      </div>
+    </a>
+    <a class="mycard" href="#" data-bs-toggle="modal" data-bs-target="#myModel" >
+      <div class="card__background" style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/mysys.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">MySys</p>
+        <h3 class="card__heading">{{'project.mysys' | translate}}</h3>
+      </div>
+    </a>
+    <a class="mycard" href="#" data-bs-toggle="modal" data-bs-target="#myModel" >
+      <div class="card__background" style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/copra.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">Copra Shop</p>
+        <h3 class="card__heading">{{'project.copra' | translate}}</h3>
+      </div>
+    </a>
+    <a class="mycard" target="_blank" href="https://play.google.com/store/apps/developer?id=Anas+Masti&hl=fr&gl=US">
+      <div class="card__background" style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/ps.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">PlayStore</p>
+        <h3 class="card__heading">{{'project.ps' | translate}}</h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+<div id="myModel" class="modal fade" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content text-light p-3" style="background-color: rgb(16, 15, 15);border-radius: 16px;">
+      <div class="modal-body">
+       <h2 class="font_bold">{{'modal.text' | translate}}</h2>
+       <button type="button" class="btn text-light float-right bg-transparent myBtn font_bold font_small mt-3" data-bs-dismiss="modal">{{'modal.btnmodal' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+

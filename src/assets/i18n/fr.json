@@ -1,0 +1,55 @@
+{
+  "nav" : {
+    "home":"Accueil",
+    "about":"À propos",
+    "skill":"Compétences",
+    "project":"Projets",
+    "contact":"Contact"
+  },
+  "home" : {
+    "hello":"Salut,",
+    "mynameis":"Je m'appelle",
+    "im":"Je suis",
+    "webdev":"Développeur Web Full-Stack",
+    "homebtn":"savoir plus sur moi"
+  },
+  "about" : {
+    "abouttitle":"À propos de moi",
+    "mynameis":"Je m'appelle",
+    "im":"Je suis un",
+    "webdevdes":"Développeur Web Full-Stack et Designer",
+    "pres1":"passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",
+    "pres2":"J'aime partager mes compétences et mes connaissances avec les personnes qui ont la même passion.",
+    "pres3":"Enfin je suis fortement intéressé par le secteur de développement informatique, et très attiré par la nouvelle technologie.",
+    "aboutbtn":"voir mes compétences"
+  },
+  "skill" : {
+    "skilltitle":"Compétences",
+    "front":"Front-end",
+    "back":"Back-end",
+    "db":"Bases de données",
+    "model":"Modélisation et Conception",
+    "graph":"Graphique Design",
+    "bureautique":"Bureautique",
+    "version":"Gestion de Versions",
+    "skillbtn":"voir mes projets"
+  },
+  "project" : {
+    "projecttitle":"Quelques Projets",
+    "rcoz":"Site Web Responsive",
+    "mediexperts":"Application Web Administrative",
+    "matiplas":"Site Web Responsive",
+    "mysys":"Site Web Responsive avec Dashboard",
+    "copra":"Application Web E-Commerce",
+    "ps":"Applications Mobile",
+    "projbtn":"contactez-moi"
+  },
+  "contact" : {
+    "contacttitle":"Contact",
+    "msg":"Salut Anas j'ai vu ton portfolio, je tiens à te dire que "
+  },
+  "modal" : {
+    "text":"Bientôt Disponible.",
+    "btnmodal":"fermer"
+  }
+}
