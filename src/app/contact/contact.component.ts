@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 // @ts-ignore
 import anime from 'animejs/lib/anime.js';
@@ -10,12 +11,12 @@ import anime from 'animejs/lib/anime.js';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private title: Title) { }
+  constructor(private title: Title, @Inject(DOCUMENT) private document: Document,  @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
     this.title.setTitle('Contact - Anas Masti')
 
-    let myslide = document.getElementById('myslide');
+    let myslide = this.document.getElementById('myslide');
 
     myslide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
@@ -25,6 +26,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
     anime.timeline({loop: true})
     .add({
       targets: '.myicon .el',
@@ -43,6 +45,6 @@ export class ContactComponent implements OnInit {
         easing: 'easeInOutSine'
       },
       direction: 'alternate'
-    })
+    })}
   }
 }

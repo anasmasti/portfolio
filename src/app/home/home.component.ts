@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 // @ts-ignore
@@ -13,12 +14,12 @@ export class HomeComponent implements OnInit {
   @ViewChild('myName')
   myName!: ElementRef;
 
-  constructor(private title: Title) {}
+  constructor(private title: Title, @Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     this.title.setTitle('Anas Masti')
 
-    let myslide = document.getElementById('myslide');
+    let myslide = this.document.getElementById('myslide');
 
     myslide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
@@ -28,8 +29,10 @@ export class HomeComponent implements OnInit {
 
 
   ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
 
-    this.myName.nativeElement.innerHTML = this.myName.nativeElement.textContent.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
+
+   this.myName.nativeElement.innerHTML = this.myName.nativeElement.textContent.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
    setTimeout(() => {
     anime.timeline({loop: false})
     .add({
@@ -51,6 +54,6 @@ export class HomeComponent implements OnInit {
       direction: 'alternate',
       duration: 650,
       loop: true,
-    })
+    }) }
   }
 }

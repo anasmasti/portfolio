@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -9,11 +9,12 @@ import { Title } from '@angular/platform-browser';
 export class ProjectComponent implements OnInit {
   @ViewChild('model')
   model!: ElementRef;
-  constructor(private title: Title) { }
+  constructor(private title: Title,
+    @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
     this.title.setTitle('Projects - Anas Masti')
-    let myslide = document.getElementById('myslide');
+    let myslide = this.document.getElementById('myslide');
 
     myslide?.setAttribute('style', 'display:flex');
     setTimeout(() => {

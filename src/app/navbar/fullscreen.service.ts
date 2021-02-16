@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
-
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
 export class FullscreenService {
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
-  private doc = <FullScreenDocument>document;
+  private doc = <FullScreenDocument>this.document;
 
   enter() {
     const el = this.doc.documentElement;
