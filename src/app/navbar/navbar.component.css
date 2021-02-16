@@ -27,7 +27,7 @@
   color: #eebc71;
 }
 .bg_btn_fr{
-  background-image: url("/assets/images/fr.png");
+  background-image: url("/assets/images/fr.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,7 @@
   border-color: #ebca9c !important; border-style: solid !important; border-width: 1.2px !important;
 }
 .bg_btn_en{
-  background-image: url("/assets/images/en.png");
+  background-image: url("/assets/images/en.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
