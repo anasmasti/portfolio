@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 // @ts-ignore
@@ -10,16 +10,26 @@ import anime from 'animejs/lib/anime.js';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('myName')
+  myName!: ElementRef;
 
   constructor(private title: Title) {}
 
   ngOnInit() {
     this.title.setTitle('Anas Masti')
+
+    let myslide = document.getElementById('myslide');
+
+    myslide?.setAttribute('style', 'display:flex');
+    setTimeout(() => {
+    myslide?.setAttribute('style', 'display:none');
+    }, 1500);
   }
+
 
   ngAfterViewInit(): void {
 
-
+    this.myName.nativeElement.innerHTML = this.myName.nativeElement.textContent.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
    setTimeout(() => {
     anime.timeline({loop: false})
     .add({
@@ -27,13 +37,13 @@ export class HomeComponent implements OnInit {
       translateY: ["-1.7em", 0],
       translateZ: 0,
       duration: 1250,
-      // delay: (el, i) => 50 * i
+      delay: (el : any ,i: any) => 50 * i,
     }).add({
       targets: '.mytitle',
       duration: 1000,
       easing: "easeOutExpo",
       delay: 100
-    }); }, 300);
+    }); }, 1300);
     anime({
       targets: '.myicon',
       translateY: [30,0],
@@ -42,6 +52,5 @@ export class HomeComponent implements OnInit {
       duration: 650,
       loop: true,
     })
-
   }
 }

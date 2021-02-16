@@ -15,6 +15,13 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.title.setTitle('Contact - Anas Masti')
 
+    let myslide = document.getElementById('myslide');
+
+    myslide?.setAttribute('style', 'display:flex');
+    setTimeout(() => {
+      myslide?.setAttribute('style', 'display:none');
+    }, 1500);
+
   }
 
   ngAfterViewInit(): void {

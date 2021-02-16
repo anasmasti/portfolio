@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -7,12 +7,24 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
+  @ViewChild('model')
+  model!: ElementRef;
   constructor(private title: Title) { }
 
   ngOnInit() {
     this.title.setTitle('Projects - Anas Masti')
+    let myslide = document.getElementById('myslide');
+
+    myslide?.setAttribute('style', 'display:flex');
+    setTimeout(() => {
+      myslide?.setAttribute('style', 'display:none');
+    }, 1500);
 
   }
-
+openModel() {
+  this.model.nativeElement.style.display = "block";
+}
+closeModel(){
+  this.model.nativeElement.style.display = "none";
+}
 }

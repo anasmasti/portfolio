@@ -4,101 +4,136 @@
     display: flex;
     min-height: 100%;
     justify-content: center;
+    width: 80vw!important;
   }
-  
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  width: 100%;
+}
+.mycard{
+  list-style: none;
+  position: relative;
+  padding: 110px;
+}
+.mycard:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transition:
+    filter 200ms linear,
+    transform 200ms linear;
+}
+.mycard:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+.card-grid:hover > .mycard:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+.card__content{
+  left: 0;
+  padding: 24px;
+  position: absolute;
+  top: 0;
+}
+.card__category{
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.card__heading{
+  color: rgba(255,255,255,0.9);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.1;
+  word-spacing: 100vw;
+  font-weight: 900;
+}
+@media(min-width: 540px){
   .card-grid{
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 326px) and (max-width: 480px) {
+  .card-grid{
     grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
-    max-width: 1200px;
-    width: 100%;
   }
-  
-  .mycard{
-    list-style: none;
-    position: relative;
-    padding: 110px;
-  }
-  
-  .mycard:before{
-    content: '';
-    display: block;
-    padding-bottom: 150%;
-    width: 100%;
-  }
-  
-  .card__background{
-    background-size: cover;
-    background-position: center;
-    border-radius: 24px;
-    bottom: 0;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform-origin: center;
-    transition:
-      filter 200ms linear,
-      transform 200ms linear;
-  }
-  
-  .mycard:hover .card__background{
-    transform: scale(1.05) translateZ(0);
-  }
-  
-  .card-grid:hover > .mycard:not(:hover) .card__background{
-    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-  }
-  
-  .card__content{
-    left: 0;
-    padding: 24px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .card__category{
-    color: rgba(255,255,255,0.6);
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-  
   .card__heading{
-    color: rgba(255,255,255,0.9);
-    font-size: 1.9rem;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
-    line-height: 1.1;
-    word-spacing: 100vw;
-    font-weight: 900;
+    font-size: 1.4rem;
   }
-  @media(min-width: 540px){
-    .card-grid{
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media(min-width: 960px){
-    .card-grid{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media only screen and (min-width: 326px) and (max-width: 480px) {
-    .card-grid{
-      grid-template-columns: repeat(1, 1fr);
-  
-    }
-    .card__heading{
-      font-size: 1.4rem;
-  
-    }
-  }
-  @media only screen and (max-width: 800px) {
-  
-  }
-  @media only screen and (max-width: 324px) {
-  }
-  
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 324px) {
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.597);
+}
+
+.modal-content {
+  margin: 25% auto;
+  padding: 50px;
+  width: 50%;
+  background-color: rgb(16, 15, 15);
+  border-radius: 26px;
+}
+
+.close {
+  color: #eebc71;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px ;
+}
+
+.close:hover {
+  color: #bbbbbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+.modal-content{padding: 30px;
+  width: 60%;}}
+@media only screen and (min-width: 326px) and (max-width: 480px) {
+.modal-content{padding: 30px;
+  width: 60%;}}
+@media only screen and (max-width: 324px) {
+.modal-content{padding: 20px;
+  width: 60%;}}

@@ -13,7 +13,13 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('About - Anas Masti')
+
+    let myslide = document.getElementById('myslide');
+
+    myslide?.setAttribute('style', 'display:flex');
+    setTimeout(() => {
+      myslide?.setAttribute('style', 'display:none');
+    }, 1500);
   }
-  
 
 }
