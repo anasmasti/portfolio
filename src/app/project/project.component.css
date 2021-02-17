@@ -66,27 +66,9 @@
   word-spacing: 100vw;
   font-weight: 900;
 }
-@media(min-width: 540px){
-  .card-grid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media(min-width: 960px){
-  .card-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media only screen and (min-width: 326px) and (max-width: 480px) {
-  .card-grid{
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .card__heading{
-    font-size: 1.4rem;
-  }
-}
-@media only screen and (max-width: 800px) {
-}
-@media only screen and (max-width: 324px) {
+.project-main{
+ position: relative;
+ margin-top: 10%;
 }
 
 .modal {
@@ -128,12 +110,38 @@ a{
   cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
-.modal-content{padding: 30px;
-  width: 60%;}}
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-main{
+    position: relative;
+    margin-top: 40%;
+   }
+}
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .modal-content{padding: 30px;
+    width: 60%;}
+  .project-main{
+    position: relative;
+    margin-top: 20%;
+   }
+}
 @media only screen and (min-width: 326px) and (max-width: 480px) {
-.modal-content{padding: 30px;
-  width: 60%;}}
-@media only screen and (max-width: 324px) {
-.modal-content{padding: 20px;
-  width: 60%;}}
+  .card-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card__heading{
+    font-size: 1.4rem;
+  }
+  .modal-content{padding: 30px;
+    width: 60%;}
+  .project-main{
+    position: relative;
+    margin-top: 0%;
+   }
+}
+
