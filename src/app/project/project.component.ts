@@ -1,5 +1,5 @@
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-project',
@@ -10,11 +10,14 @@ export class ProjectComponent implements OnInit {
   @ViewChild('model')
   model!: ElementRef;
   constructor(private title: Title,
-    @Inject(DOCUMENT) private document: Document) { }
+    @Inject(DOCUMENT) private document: Document, private meta: Meta) { }
 
   ngOnInit() {
     this.title.setTitle('Projects - Anas Masti')
     let myslide = this.document.getElementById('myslide');
+    this.meta.updateTag({ name: 'description', content: "Salut, Je m'appelle Anas Masti, Je suis Développeur Web Full-Stack" })
+    this.meta.updateTag({ name: 'og:url', content: 'https://anasmasti.com/project' })
+    this.meta.updateTag({ name: 'og:title', content: 'Projects - Anas Masti' })
 
     myslide?.setAttribute('style', 'display:flex');
     setTimeout(() => {

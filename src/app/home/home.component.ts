@@ -1,6 +1,6 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 // @ts-ignore
 import anime from 'animejs/lib/anime.js';
@@ -14,10 +14,14 @@ export class HomeComponent implements OnInit {
   @ViewChild('myName')
   myName!: ElementRef;
 
-  constructor(private title: Title, @Inject(DOCUMENT) private document: Document, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(private title: Title, @Inject(DOCUMENT) private document: Document,
+   @Inject(PLATFORM_ID) private platformId: Object,  private meta: Meta) {}
 
   ngOnInit() {
     this.title.setTitle('Anas Masti')
+    this.meta.updateTag({ name: 'description', content: "Salut, Je m'appelle Anas Masti, Je suis Développeur Web Full-Stack" })
+    this.meta.updateTag({ name: 'og:url', content: 'https://anasmasti.com' })
+    this.meta.updateTag({ name: 'og:title', content: 'Anas Masti' })
 
     let myslide = this.document.getElementById('myslide');
 
