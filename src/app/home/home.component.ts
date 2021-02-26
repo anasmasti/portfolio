@@ -34,8 +34,6 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-
-
    this.myName.nativeElement.innerHTML = this.myName.nativeElement.textContent.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
    setTimeout(() => {
     anime.timeline({loop: false})

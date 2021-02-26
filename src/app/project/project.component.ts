@@ -25,10 +25,10 @@ export class ProjectComponent implements OnInit {
     }, 1500);
 
   }
-openModel() {
+  openModel() {
   this.model.nativeElement.style.display = "block";
-}
-closeModel(){
+  }
+  closeModel(){
   this.model.nativeElement.style.display = "none";
-}
+  }
 }

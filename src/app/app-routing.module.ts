@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { SkillComponent } from './skill/skill.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent, data: {animation: 'Home'} },
-   { path: 'about', component: AboutComponent, data: {animation: 'About'} },
-   { path: 'skill', component: SkillComponent, data: {animation: 'Skill'} },
-   { path: 'contact', component: ContactComponent, data: {animation: 'Contact'} },
-   { path: 'project', component: ProjectComponent, data: {animation: 'Project'} },
+   { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
+   { path: 'skill',loadChildren: () => import('./skill/skill.module').then(m => m.SkillModule) },
+   { path: 'contact',loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
+   { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
 ];
 
 @NgModule({

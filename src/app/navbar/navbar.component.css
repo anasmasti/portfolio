@@ -121,7 +121,7 @@
     transform: scaleX(1)
   }
   50%{
-    transform: scaleX(0.3);
+    transform: scaleX(0.8);
 
   }
   100%{
