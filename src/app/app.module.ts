@@ -22,6 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavbarComponent,
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
