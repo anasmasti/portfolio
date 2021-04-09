@@ -4,7 +4,7 @@ import { DOCUMENT } from '@angular/common';
   providedIn: 'root'
 })
 export class FullscreenService {
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   private doc = <FullScreenDocument>this.document;
 

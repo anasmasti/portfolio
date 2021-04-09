@@ -1,7 +1,21 @@
-.p_aboutme{font-size: 24px;}
+.p_aboutme {
+    font-size: 24px;
+}
+
 @media only screen and (max-width: 800px) {
-.p_aboutme{font-size: 21px;}}
+    .p_aboutme {
+        font-size: 21px;
+    }
+}
+
 @media only screen and (min-width: 326px) and (max-width: 480px) {
-.p_aboutme{font-size: 16px;}}
+    .p_aboutme {
+        font-size: 16px;
+    }
+}
+
 @media only screen and (max-width: 324px) {
-.p_aboutme{font-size: 16px;}}
+    .p_aboutme {
+        font-size: 16px;
+    }
+}

@@ -26,9 +26,9 @@ export class ProjectComponent implements OnInit {
 
   }
   openModel() {
-  this.model.nativeElement.style.display = "block";
+    this.model.nativeElement.style.display = "block";
   }
-  closeModel(){
-  this.model.nativeElement.style.display = "none";
+  closeModel() {
+    this.model.nativeElement.style.display = "none";
   }
 }

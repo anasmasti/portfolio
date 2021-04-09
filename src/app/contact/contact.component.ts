@@ -12,7 +12,7 @@ import anime from 'animejs/lib/anime.js';
 export class ContactComponent implements OnInit {
 
   constructor(private title: Title, @Inject(DOCUMENT) private document: Document,
-  @Inject(PLATFORM_ID) private platformId: Object, private meta: Meta) { }
+    @Inject(PLATFORM_ID) private platformId: Object, private meta: Meta) { }
 
   ngOnInit() {
     this.title.setTitle('Contact - Anas Masti')
@@ -31,24 +31,25 @@ export class ContactComponent implements OnInit {
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-    anime.timeline({loop: true})
-    .add({
-      targets: '.myicon .el',
-      translateX: {
-        value: '*=2.5', // 100px * 2.5 = '250px'
-        duration: 1000
-      },
-      width: {
-        value: '-=20px', // 28 - 20 = '8px'
-        duration: 1800,
-        easing: 'easeInOutSine'
-      },
-      rotate: {
-        value: '+=2turn', // 0 + 2 = '2turn'
-        duration: 1800,
-        easing: 'easeInOutSine'
-      },
-      direction: 'alternate'
-    })}
+      anime.timeline({ loop: true })
+        .add({
+          targets: '.myicon .el',
+          translateX: {
+            value: '*=2.5', // 100px * 2.5 = '250px'
+            duration: 1000
+          },
+          width: {
+            value: '-=20px', // 28 - 20 = '8px'
+            duration: 1800,
+            easing: 'easeInOutSine'
+          },
+          rotate: {
+            value: '+=2turn', // 0 + 2 = '2turn'
+            duration: 1800,
+            easing: 'easeInOutSine'
+          },
+          direction: 'alternate'
+        })
+    }
   }
 }

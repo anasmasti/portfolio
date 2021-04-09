@@ -1,11 +1,13 @@
 <h1 class="font_bold pt-lg-3 myh1 ml6">
-    {{'home.hello' | translate}} <br>
-    {{'home.mynameis' | translate}}
-    <span class="myname mytitle" #myName>Anas Masti</span>,<br>
-    {{'home.im' | translate}}
+    {{'home.hello' | translate}} <br> {{'home.mynameis' | translate}}
+    <span class="myname mytitle" #myName>Anas Masti</span>,<br> {{'home.im' | translate}}
     <span class="myname">{{'home.webdev' | translate}} </span> <i class="fas fa-code"></i>
-  </h1>
+</h1>
 
-  <a [routerLink]="['/about']" class="btn bg-transparent text-light myBtn font_bold mt-5 font_small">{{'home.homebtn' | translate}} </a>
-  <a [routerLink]="['/about']" aria-label="Down" class="btn text-light bg-transparent font_bold mt-5 mr-5 float-right"><i class="fas fa-angle-down fa-3x myicon"></i></a>
+<a [routerLink]="['/about']" class="btn bg-transparent text-light myBtn font_bold mt-5 font_small">
+  {{'home.homebtn' | translate}}
+</a>
 
+<a [routerLink]="['/about']" aria-label="Down" class="btn text-light bg-transparent font_bold mt-5 mr-5 float-right">
+    <span style="" class="icon-angle-down myicon"></span>
+</a>

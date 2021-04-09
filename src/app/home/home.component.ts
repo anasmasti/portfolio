@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   myName!: ElementRef;
 
   constructor(private title: Title, @Inject(DOCUMENT) private document: Document,
-   @Inject(PLATFORM_ID) private platformId: Object,  private meta: Meta) {}
+    @Inject(PLATFORM_ID) private platformId: Object, private meta: Meta) { }
 
   ngOnInit() {
     this.title.setTitle('Anas Masti')
@@ -27,35 +27,37 @@ export class HomeComponent implements OnInit {
 
     myslide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-    myslide?.setAttribute('style', 'display:none');
+      myslide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-   this.myName.nativeElement.innerHTML = this.myName.nativeElement.textContent.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
-   setTimeout(() => {
-    anime.timeline({loop: false})
-    .add({
-      targets: '.mytitle .el',
-      translateY: ["-1.7em", 0],
-      translateZ: 0,
-      duration: 1250,
-      delay: (el : any ,i: any) => 50 * i,
-    }).add({
-      targets: '.mytitle',
-      duration: 1000,
-      easing: "easeOutExpo",
-      delay: 100
-    }); }, 1300);
-    anime({
-      targets: '.myicon',
-      translateY: [30,0],
-      easing: 'easeInOutQuad',
-      direction: 'alternate',
-      duration: 650,
-      loop: true,
-    }) }
+      this.myName.nativeElement.innerHTML = this.myName.nativeElement.textContent.replace(/\S/g, "<span class='el' style='display:inline-block;'>$&</span>");
+      setTimeout(() => {
+        anime.timeline({ loop: false })
+          .add({
+            targets: '.mytitle .el',
+            translateY: ["-1.7em", 0],
+            translateZ: 0,
+            duration: 1250,
+            delay: (el: any, i: any) => 50 * i,
+          }).add({
+            targets: '.mytitle',
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 100
+          });
+      }, 1300);
+      anime({
+        targets: '.myicon',
+        translateY: [30, 0],
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        duration: 650,
+        loop: true,
+      })
+    }
   }
 }

@@ -1,97 +1,124 @@
 <div class="sidenav h-100 ">
-   <button aria-label="Menu" class="mymenu bg-transparent border-0" id="mymenu" (click)="menuchange();showFullMenu()" #myMenu>
-    <div  class="menuicon" id="menuicon">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-   </button>
-   <a href="#" aria-label="Fulscreen" class="fullscreenbtn" (click)="showFullscreen()"><i class="fas fa-expand"></i></a>
+    <button aria-label="Menu" class="mymenu bg-transparent border-0" id="mymenu" (click)="menuchange();showFullMenu()" #myMenu>
+        <div class="menuicon" id="menuicon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </button>
+    <a href="#" aria-label="Fulscreen" class="fullscreenbtn" (click)="showFullscreen()">
+        <span class="icon-expand"></span>
+    </a>
     <div class="items_menu">
-      <a [routerLink]="['/']" aria-label="Home" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"  ><i class="fas fa-angle-right fa-2x"></i></a>
-      <a [routerLink]="['/about']" aria-label="About" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" ><i class="far fa-user"></i></a>
-      <a [routerLink]="['/skill']" aria-label="Skill" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" ><i class="fas fa-drafting-compass"></i></a>
-      <a [routerLink]="['/project']" aria-label="Project" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"  ><i class="fas fa-layer-group"></i></a>
-      <a [routerLink]="['/contact']" aria-label="Contact" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" ><i class="far fa-comment"></i></a>
+        <a [routerLink]="['/']" aria-label="Home" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+            <span class="icon-tag"></span>
+        </a>
+        <a [routerLink]="['/about']" aria-label="About" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+            <span class="icon-user"></span>
+        </a>
+        <a [routerLink]="['/skill']" aria-label="Skill" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+            <span class="icon-pencil2"></span>
+        </a>
+        <a [routerLink]="['/project']" aria-label="Project" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+            <span class="icon-stack"></span>
+        </a>
+        <a [routerLink]="['/contact']" aria-label="Contact" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+            <span class="icon-bubble"></span>
+        </a>
     </div>
-    <div>
+</div>
+<nav class="navbar navbar-expand-lg justify-content-center navbar-dark bg-transparant forDesktop">
+    <ul class="navbar-nav ml-lg-5 soc_media">
+        <li class="nav-item">
+            <a aria-label="En" class="btn rounded-0 mr-2 bg-transparant border-0 ml-lg-5 bg_btn_en" name="en-btn" (click)="useLanguage('en')"></a>
+            <a aria-label="Fr" class="btn rounded-0 bg-transparant border-0 bg_btn_fr" name="fr-btn" (click)="useLanguage('fr')"></a>
+        </li>
+    </ul>
 
-    </div>
-  </div>
-  <nav class="navbar navbar-expand-lg justify-content-center navbar-dark bg-transparant forDesktop">
-      <ul class="navbar-nav ml-lg-5 soc_media">
+    <ul class="navbar-nav flex-fill justify-content-center soc_media">
         <li class="nav-item">
-         <a aria-label="En" class="btn rounded-0 mr-2 bg-transparant border-0 ml-lg-5 bg_btn_en" name="en-btn" (click)="useLanguage('en')"></a>
-         <a aria-label="Fr" class="btn rounded-0 bg-transparant border-0 bg_btn_fr" name="fr-btn" (click)="useLanguage('fr')"></a>
+            <a class="nav-link" aria-label="Facebook" rel="noopener" target="_blank" href="https://www.facebook.com/anas.masti.96">
+                <span class="icon-facebook"></span>
+            </a>
         </li>
-      </ul>
+        <li class="nav-item">
+            <a class="nav-link" aria-label="Twitter" rel="noopener" target="_blank" href="https://twitter.com/AnasMasti">
+                <span class="icon-twitter"></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-label="Linkedin" rel="noopener" target="_blank" href="https://www.linkedin.com/in/anas-masti-616040189">
+                <span class="icon-linkedin"></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-label="WhatsApp" rel="noopener" target="_blank" href="https://wa.me/212660548100?text={{'contact.msg' | translate}}">
+                <span class="icon-whatsapp"></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-label="Telegram" rel="noopener" target="_blank" href="https://t.me/anasmasti">
+                <span class="icon-send-o"></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-label="GitHub" rel="noopener" target="_blank" href="https://github.com/anasmasti">
+                <span class="icon-github"></span>
+            </a>
+        </li>
+    </ul>
 
-      <ul class="navbar-nav flex-fill justify-content-center soc_media">
+    <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-label="Facebook" rel="noopener" target="_blank" href="https://www.facebook.com/anas.masti.96" ><i class="fab fa-facebook-f"></i></a>
+            <a href="/" class="nav-link logo"><img src="assets/images/logo.webp" alt="Anas Masti" width="40px" height="80px" class="mr-4"></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="Twitter" rel="noopener" target="_blank" href="https://twitter.com/AnasMasti" ><i class="fab fa-twitter"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="Messanger" rel="noopener" target="_blank" href="https://m.me/anas.masti.96"><i class="fab fa-facebook-messenger"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="Linkedin" rel="noopener" target="_blank" href="https://www.linkedin.com/in/anas-masti-616040189" ><i class="fab fa-linkedin-in"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="WhatsApp" rel="noopener" target="_blank" href="https://wa.me/212660548100?text={{'contact.msg' | translate}}"><i class="fab fa-whatsapp"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="Telegram" rel="noopener" target="_blank" href="https://t.me/anasmasti"><i class="fab fa-telegram-plane"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="GitHub" rel="noopener" target="_blank" href="https://github.com/anasmasti"><i class="fab fa-github"></i></a>
-        </li>
-      </ul>
+    </ul>
+</nav>
 
-      <ul class="navbar-nav ml-auto">
+<nav class="navbar navbar-dark bg-transparant forMobile  mb-5 ">
+    <ul class="navbar-nav ml-5 soc_media flex-row">
         <li class="nav-item">
-          <a href="/" class="nav-link logo"><img src="assets/images/logo.webp" alt="Anas Masti" width="40px" height="80px" class="mr-4"></a>
+            <a aria-label="En" class="btn rounded-0 mr-2 bg-transparant bg_btn_en" name="en-btn" (click)="useLanguage('en')"></a>
+            <a aria-label="Fr" class="btn rounded-0 bg-transparant bg_btn_fr" name="fr-btn" (click)="useLanguage('fr')"></a>
         </li>
-      </ul>
-    </nav>
+    </ul>
 
-    <nav class="navbar navbar-dark bg-transparant forMobile  mb-5 ">
-      <ul class="navbar-nav ml-5 soc_media flex-row">
-       <li class="nav-item">
-        <a aria-label="En" class="btn rounded-0 mr-2 bg-transparant bg_btn_en" name="en-btn" (click)="useLanguage('en')"></a>
-        <a aria-label="Fr" class="btn rounded-0 bg-transparant bg_btn_fr" name="fr-btn" (click)="useLanguage('fr')"></a>
-       </li>
-     </ul>
-
-      <ul class="navbar-nav soc_media text-center flex-row d-flex ml-4">
+    <ul class="navbar-nav soc_media text-center flex-row d-flex ml-4">
         <li class="nav-item">
-          <a aria-label="Facebook" class="nav-link" rel="noopener" target="_blank" href="https://www.facebook.com/anas.masti.96" ><i class="fab fa-facebook-f"></i></a>
-        </li>
-        <li class="nav-item ml-2">
-          <a aria-label="Twitter" class="nav-link" rel="noopener" target="_blank" href="https://twitter.com/AnasMasti" ><i class="fab fa-twitter"></i></a>
+            <a aria-label="Facebook" class="nav-link" rel="noopener" target="_blank" href="https://www.facebook.com/anas.masti.96">
+                <span class="icon-facebook"></span>
+            </a>
         </li>
         <li class="nav-item mx-2">
-          <a aria-label="Messanger" class="nav-link" rel="noopener" target="_blank" href="https://m.me/anas.masti.96"><i class="fab fa-facebook-messenger"></i></a>
+            <a aria-label="Twitter" class="nav-link" rel="noopener" target="_blank" href="https://twitter.com/AnasMasti">
+                <span class="icon-twitter"></span>
+            </a>
         </li>
         <li class="nav-item">
-          <a aria-label="Linkedin" class="nav-link" rel="noopener" target="_blank" href="https://www.linkedin.com/in/anas-masti-616040189" ><i class="fab fa-linkedin-in"></i></a>
+            <a aria-label="Linkedin" class="nav-link" rel="noopener" target="_blank" href="https://www.linkedin.com/in/anas-masti-616040189">
+                <span class="icon-linkedin"></span>
+            </a>
         </li>
         <li class="nav-item mx-2">
-          <a aria-label="WhatsApp" class="nav-link" rel="noopener" target="_blank" href="https://wa.me/212660548100?text={{'contact.msg' | translate}}"><i class="fab fa-whatsapp"></i></a>
+            <a aria-label="WhatsApp" class="nav-link" rel="noopener" target="_blank" href="https://wa.me/212660548100?text={{'contact.msg' | translate}}">
+                <span class="icon-whatsapp"></span>
+            </a>
         </li>
         <li class="nav-item mr-2">
-          <a aria-label="Telegram" class="nav-link" rel="noopener" target="_blank" href="https://t.me/anasmasti"><i class="fab fa-telegram-plane"></i></a>
+            <a aria-label="Telegram" class="nav-link" rel="noopener" target="_blank" href="https://t.me/anasmasti">
+                <span class="icon-send-o"></span>
+            </a>
         </li>
         <li class="nav-item">
-          <a aria-label="GitHub" class="nav-link" rel="noopener" target="_blank" href="https://github.com/anasmasti"><i class="fab fa-github"></i></a>
+            <a aria-label="GitHub" class="nav-link" rel="noopener" target="_blank" href="https://github.com/anasmasti">
+                <span class="icon-github"></span>
+            </a>
         </li>
-      </ul>
+    </ul>
 
-      <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a aria-label="Logo" href="/" class="nav-link logo"><img src="assets/images/logo.webp" alt="Anas Masti" width="30px" height="60px" class="mr-1"></a>
+            <a aria-label="Logo" href="/" class="nav-link logo"><img src="assets/images/logo.webp" alt="Anas Masti" width="30px" height="60px" class="mr-1"></a>
         </li>
-      </ul>
-    </nav>
+    </ul>
+</nav>

@@ -1,6 +1,6 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 // @ts-ignore
 import anime from 'animejs/lib/anime.js'
 import { FullscreenService } from './fullscreen.service';
@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     translate.setDefaultLang('fr');
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   menuchange() {
     this.myMenu.nativeElement.classList.toggle("change");
@@ -33,56 +33,56 @@ export class NavbarComponent implements OnInit {
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-    anime({
-      targets: '.items_menu',
-      translateX: ['-200%', 0],
-      easing: 'easeInOutExpo',
-      duration: 3950,
-    });
-    anime({
-      targets: '.mymenu',
-      translateX: ['-200%', 0],
-      easing: 'easeInOutExpo',
-      duration: 4800,
-    });
-    anime({
-      targets: '.fullscreenbtn',
-      translateX: ['-200%', 0],
-      easing: 'easeInOutExpo',
-      duration: 4800,
-    });
-    anime({
-      targets: '.soc_media',
-      translateY: ['-220px', 0],
-      duration: 2950,
-      easing: 'easeInOutExpo'
-    });
-    anime({
-      targets: '.logo',
-      translateY: ['-120px', 0],
-      duration: 1350,
-      easing: 'easeInOutExpo'
-    });
-  }
+      anime({
+        targets: '.items_menu',
+        translateX: ['-200%', 0],
+        easing: 'easeInOutExpo',
+        duration: 3950,
+      });
+      anime({
+        targets: '.mymenu',
+        translateX: ['-200%', 0],
+        easing: 'easeInOutExpo',
+        duration: 4800,
+      });
+      anime({
+        targets: '.fullscreenbtn',
+        translateX: ['-200%', 0],
+        easing: 'easeInOutExpo',
+        duration: 4800,
+      });
+      anime({
+        targets: '.soc_media',
+        translateY: ['-220px', 0],
+        duration: 2950,
+        easing: 'easeInOutExpo'
+      });
+      anime({
+        targets: '.logo',
+        translateY: ['-120px', 0],
+        duration: 1350,
+        easing: 'easeInOutExpo'
+      });
+    }
   }
 
-  showFullMenu(){
+  showFullMenu() {
     let myfullMenu = this.document.getElementById('fullmenu');
     if (!this.isShown) {
       myfullMenu?.setAttribute('style', 'display:flex');
       this.isShown = true
-    }else{
+    } else {
       myfullMenu?.classList.add('hidefullmenu')
       this.isShown = false
       setTimeout(() => {
-       myfullMenu?.setAttribute('style', 'display:none');
-       myfullMenu?.classList.remove('hidefullmenu')
+        myfullMenu?.setAttribute('style', 'display:none');
+        myfullMenu?.classList.remove('hidefullmenu')
       }, 1500);
     }
-   }
+  }
 
   showFullscreen() {
     this.fullscreen.toggle();
-    }
+  }
 
 }
