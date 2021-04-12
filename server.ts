@@ -32,16 +32,7 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
-  });
-
-  server.get('*', (req: express.Request, res: express.Response) => {
-    res.render('index', {
-      req,
-      providers: [
-        { provide: REQUEST, useValue: req },
-      ]
-    });
+    res.render(indexHtml, { req, providers: [{ provide: REQUEST, useValue: req }] });
   });
 
   return server;
