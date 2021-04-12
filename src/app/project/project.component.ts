@@ -9,6 +9,7 @@ import { DOCUMENT } from '@angular/common';
 export class ProjectComponent implements OnInit {
   @ViewChild('model')
   model!: ElementRef;
+  
   constructor(private title: Title,
     @Inject(DOCUMENT) private document: Document, private meta: Meta) { }
 
