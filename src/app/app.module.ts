@@ -9,6 +9,8 @@ import { SideNavbarComponent } from './layout/side-navbar/side-navbar.component'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MainLoadingComponent } from './shared/main-loading/main-loading.component';
+import { FullscreenMenuComponent } from './layout/fullscreen-menu/fullscreen-menu.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,6 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     NavbarComponent,
     SideNavbarComponent,
+    MainLoadingComponent,
+    FullscreenMenuComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
