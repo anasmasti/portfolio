@@ -1,3 +1,4 @@
+<app-side-navbar></app-side-navbar>
 <app-navbar></app-navbar>
 <div class="main">
     <router-outlet></router-outlet>
@@ -12,27 +13,32 @@
     <div class="fullmenu" id="fullmenu">
         <ul class="fullmenulist">
             <li>
-                <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+                <a [routerLink]="['/']" routerLinkActive="router-link-active"
+                    [routerLinkActiveOptions]="{ exact: true }">
                     {{'nav.home' | translate}}
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/about']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+                <a [routerLink]="['/about']" routerLinkActive="router-link-active"
+                    [routerLinkActiveOptions]="{ exact: true }">
                     {{'nav.about' | translate}}
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/skill']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+                <a [routerLink]="['/skill']" routerLinkActive="router-link-active"
+                    [routerLinkActiveOptions]="{ exact: true }">
                     {{'nav.skill' | translate}}
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/project']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+                <a [routerLink]="['/project']" routerLinkActive="router-link-active"
+                    [routerLinkActiveOptions]="{ exact: true }">
                     {{'nav.project' | translate}}
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/contact']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+                <a [routerLink]="['/contact']" routerLinkActive="router-link-active"
+                    [routerLinkActiveOptions]="{ exact: true }">
                     {{'nav.contact' | translate}}
                 </a>
             </li>

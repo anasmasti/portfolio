@@ -1,10 +1,10 @@
 import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FullscreenService {
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   private doc = <FullScreenDocument>this.document;
 
@@ -52,7 +52,4 @@ interface FullScreenDocumentElement extends HTMLElement {
   msRequestFullscreen?: () => void;
   mozRequestFullScreen?: () => void;
   webkitRequestFullscreen?: () => void;
-
 }
-
-

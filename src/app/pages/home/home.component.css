@@ -1,0 +1,10 @@
+.myicon {
+  color: #eebc71 !important;
+  position: relative;
+  display: flex;
+  font-size: 50px;
+}
+
+.myicon:hover {
+  color: #ebca9c !important;
+}

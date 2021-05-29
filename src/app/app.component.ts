@@ -8,18 +8,16 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-
-  constructor(private title: Title,
-    @Inject(DOCUMENT) private document: Document,
-  ) { }
+  constructor(
+    private title: Title,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
   ngOnInit(): void {
-    this.title.setTitle('Anas Masti')
+    this.title.setTitle('Anas Masti');
     let myslide = this.document.getElementById('myslide');
     setTimeout(() => {
       myslide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 }
-
-

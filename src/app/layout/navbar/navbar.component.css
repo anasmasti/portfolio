@@ -1,0 +1,44 @@
+.nav-link {
+  color: #ebca9c !important;
+}
+
+.nav-link :hover {
+  color: #eebc71;
+}
+
+.bg_btn_fr {
+  background-image: url("/assets/images/fr.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 13px !important;
+  padding-right: 13px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-color: #ebca9c !important;
+  border-style: solid !important;
+  border-width: 1.2px !important;
+}
+
+.bg_btn_en {
+  background-image: url("/assets/images/en.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 13px !important;
+  padding-right: 13px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-color: #ebca9c !important;
+  border-style: solid !important;
+  border-width: 1.2px !important;
+}
+
+.menuicon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+
+
