@@ -1,0 +1,17 @@
+.main {
+    height: 80% !important;
+    display: flex;
+    align-items: center;
+    margin-left: 150px !important;
+    padding: 0% 5px;
+}
+
+@media only screen and (max-width: 640px) {
+    .main {
+        margin-left: 80px !important;
+        padding: 0% 5px;
+        height: 80% !important;
+        display: flex;
+        align-items: initial;
+    }
+}

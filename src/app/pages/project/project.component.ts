@@ -1,26 +1,23 @@
 import {
   Component,
-  ElementRef,
   Inject,
   OnInit,
-  ViewChild,
 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
+import { DialogModalService } from 'src/app/services/dialog-modal.service';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit {
-  @ViewChild('model')
-  model!: ElementRef;
-
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,
-    private meta: Meta
-  ) {}
+    private meta: Meta,
+    public modalService: DialogModalService
+  ) { }
 
   ngOnInit() {
     this.title.setTitle('Projects - Anas Masti');
@@ -41,10 +38,9 @@ export class ProjectComponent implements OnInit {
       myslide?.setAttribute('style', 'display:none');
     }, 1500);
   }
-  openModel() {
-    this.model.nativeElement.style.display = 'block';
+
+  openModal() {
+    this.modalService.open()
   }
-  closeModel() {
-    this.model.nativeElement.style.display = 'none';
-  }
+
 }

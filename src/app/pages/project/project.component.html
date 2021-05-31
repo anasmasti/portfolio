@@ -8,7 +8,7 @@
 
     <section class="hero-section my-4 pr-5 ">
         <div class="card-grid">
-            <a class="mycard" (click)="openModel()">
+            <a class="mycard" (click)="openModal()">
                 <div class="card__background"
                     style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/rcoz.webp)"></div>
                 <div class="card__content">
@@ -16,7 +16,7 @@
                     <h3 class="card__heading">{{'project.rcoz' | translate}}</h3>
                 </div>
             </a>
-            <a class="mycard" (click)="openModel()">
+            <a class="mycard" (click)="openModal()">
                 <div class="card__background"
                     style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/mediexperts.webp)">
                 </div>
@@ -34,7 +34,7 @@
                     <h3 class="card__heading">{{'project.matiplas' | translate}}</h3>
                 </div>
             </a>
-            <a class="mycard" data-bs-toggle="modal" (click)="openModel()">
+            <a class="mycard" data-bs-toggle="modal" (click)="openModal()">
                 <div class="card__background"
                     style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/mysys.webp)"></div>
                 <div class="card__content">
@@ -42,7 +42,7 @@
                     <h3 class="card__heading">{{'project.mysys' | translate}}</h3>
                 </div>
             </a>
-            <a class="mycard" (click)="openModel()">
+            <a class="mycard" (click)="openModal()">
                 <div class="card__background"
                     style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/copra.webp)"></div>
                 <div class="card__content">
@@ -62,10 +62,7 @@
         </div>
     </section>
 
-    <div id="model" class="modal" #model>
-        <div class="modal-content">
-            <span class="close" (click)="closeModel()">&times;</span>
-            <h2 class="font_bold py-2">{{'modal.text' | translate}}</h2>
-        </div>
-    </div>
+    <app-dialog-modal>
+        <h2 class="font_bold py-2">{{'modal.text' | translate}}</h2>
+    </app-dialog-modal>
 </div>

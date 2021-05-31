@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { FullscreenService } from '../../services//fullscreen.service';
+import { FullscreenService } from '../../../services/fullscreen.service';
 // @ts-ignore
 import anime from 'animejs/lib/anime.js';
 

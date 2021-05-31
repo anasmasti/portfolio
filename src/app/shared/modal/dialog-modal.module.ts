@@ -1,22 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { DialogModalModule } from 'src/app/shared/modal/dialog-modal.module';
+import { DialogModalComponent } from 'src/app/shared/modal/dialog-modal.component';
 import { HttpLoaderFactory } from '../../app.module';
-import { ProjectComponent } from './project.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: ProjectComponent,
-  },
-];
 
 @NgModule({
-  declarations: [ProjectComponent],
+  declarations: [DialogModalComponent],
   imports: [
-    RouterModule.forChild(routes),
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -24,7 +15,7 @@ const routes: Routes = [
         deps: [HttpClient],
       },
     }),
-    DialogModalModule
-  ]
+  ],
+  exports: [DialogModalComponent],
 })
-export class ProjectModule {}
+export class DialogModalModule {}
