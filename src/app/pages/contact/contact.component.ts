@@ -124,6 +124,7 @@ export class ContactComponent implements OnInit {
         // clear form with statut
         this.contactForm.reset() // reset form
         this.isSended = false // make message done statut false
+        this.errorMessage = ''
       }, 1800);
 
     }, (error) => this.errorMessage = error.error.message
