@@ -1,4 +1,3 @@
-import { DialogModalModule } from './shared/modal/dialog-modal.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +13,6 @@ import { MainLoadingComponent } from './shared/main-loading/main-loading.compone
 import { FullscreenMenuComponent } from './layout/components/fullscreen-menu/fullscreen-menu.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -28,7 +26,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainLoadingComponent,
     FullscreenMenuComponent,
     MainLayoutComponent,
-
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -41,8 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    BrowserModule,
-    DialogModalModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

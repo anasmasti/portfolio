@@ -1,55 +1,88 @@
 {
-  "nav" : {
-    "home":"Accueil",
-    "about":"À propos",
-    "skill":"Compétences",
-    "project":"Projets",
-    "contact":"Contact"
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skill": "Compétences",
+    "project": "Projets",
+    "contact": "Contact"
   },
-  "home" : {
-    "hello":"Salut,",
-    "mynameis":"Je m'appelle",
-    "im":"Je suis",
-    "webdev":"Développeur Web Full-Stack",
-    "homebtn":"savoir plus sur moi"
+  "home": {
+    "hello": "Salut,",
+    "mynameis": "Je m'appelle",
+    "im": "Je suis",
+    "webdev": "Développeur Web Full-Stack",
+    "homebtn": "savoir plus sur moi"
   },
-  "about" : {
-    "abouttitle":"À propos de moi",
-    "mynameis":"Je m'appelle",
-    "im":"Je suis un",
-    "webdevdes":"Développeur Web Full-Stack et Designer",
-    "pres1":"passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",
-    "pres2":"J'aime partager mes compétences et mes connaissances avec les personnes qui ont la même passion.",
-    "pres3":"Enfin je suis fortement intéressé par le secteur de développement informatique, et très attiré par la nouvelle technologie.",
-    "aboutbtn":"voir mes compétences"
+  "about": {
+    "abouttitle": "À propos de moi",
+    "mynameis": "Je m'appelle",
+    "im": "Je suis un",
+    "webdevdes": "Développeur Web Full-Stack et Designer",
+    "pres1": "passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",
+    "pres2": "J'aime partager mes compétences et mes connaissances avec les personnes qui ont la même passion.",
+    "pres3": "Enfin je suis fortement intéressé par le secteur de développement informatique, et très attiré par la nouvelle technologie.",
+    "aboutbtn": "voir mes compétences"
   },
-  "skill" : {
-    "skilltitle":"Compétences",
-    "front":"Front-end",
-    "back":"Back-end",
-    "db":"Bases de données",
-    "model":"Modélisation et Conception",
-    "graph":"Graphique Design",
-    "bureautique":"Bureautique",
-    "version":"Gestion de Versions",
-    "skillbtn":"voir mes projets"
+  "skill": {
+    "skilltitle": "Compétences",
+    "front": "Front-end",
+    "back": "Back-end",
+    "db": "Bases de données",
+    "model": "Modélisation et Conception",
+    "graph": "Graphique Design",
+    "bureautique": "Bureautique",
+    "version": "Gestion de Versions",
+    "skillbtn": "voir mes projets"
   },
-  "project" : {
-    "projecttitle":"Quelques Projets",
-    "rcoz":"Site Web Responsive",
-    "mediexperts":"Application Web Administrative",
-    "matiplas":"Site Web Responsive",
-    "mysys":"Site Web Responsive avec Dashboard",
-    "copra":"Application Web E-Commerce",
-    "ps":"Applications Mobile",
-    "projbtn":"contactez-moi"
+  "project": {
+    "projecttitle": "Quelques Projets",
+    "rcoz": "Site Web Responsive",
+    "mediexperts": "Application Web Administrative",
+    "matiplas": "Site Web Responsive",
+    "mysys": "Site Web Responsive avec Dashboard",
+    "copra": "Application Web E-Commerce",
+    "ps": "Applications Mobile",
+    "projbtn": "contactez-moi"
   },
-  "contact" : {
-    "contacttitle":"Contact",
-    "msg":"Salut Anas j'ai vu ton portfolio, je tiens à te dire que "
+  "contact": {
+    "contacttitle": "Contact",
+    "msg": "Salut Anas j'ai vu ton portfolio, je tiens à te dire que ",
+    "card": {
+      "title": "En ligne"
+    },
+    "form": {
+      "title": "Envoie moi un message maintenant",
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "phone": "Numéro de téléphone",
+      "email": "E-mail",
+      "message": "Message",
+      "btn_title": "Envoyer maintenant",
+      "statut": "C'est fait, Merci.",
+      "validation": {
+        "first_name": {
+          "required": "Prénom obligatoire.",
+          "minlength": "Prénom doit contenir plus de 3 caractères.",
+          "manlength": "Prénom doit contenir moins de 30 caractères."
+        },
+        "last_name": {
+          "required": "Nom obligatoire.",
+          "minlength": "Nom doit contenir plus de 3 caractères.",
+          "manlength": "Nom doit contenir moins de 30 caractères."
+        },
+        "email": {
+          "invalid": "E-mail invalide, Exemple: anasmasti@hotmail.com."
+        },
+        "message": {
+          "required": "Message obligatoire.",
+          "minlength": "Message doit contenir plus de 10 caractères.",
+          "manlength": "Message doit contenir moins de 12000 caractères."
+        }
+      }
+    }
   },
-  "modal" : {
-    "text":"Bientôt Disponible.",
-    "btnmodal":"fermer"
+  "modal": {
+    "text": "Bientôt Disponible.",
+    "btnmodal": "fermer"
   }
 }

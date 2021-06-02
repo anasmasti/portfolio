@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
 import { ContactComponent } from './contact.component';
+import { DialogModalModule } from './../../shared/modal/dialog-modal.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   {
@@ -15,6 +20,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [ContactComponent],
   imports: [
+    CommonModule,
+    HttpClientModule,
     RouterModule.forChild(routes),
     TranslateModule.forChild({
       loader: {
@@ -23,6 +30,8 @@ const routes: Routes = [
         deps: [HttpClient],
       },
     }),
+    DialogModalModule,
+    ReactiveFormsModule,
   ],
 })
-export class ContactModule {}
+export class ContactModule { }

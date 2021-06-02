@@ -7,7 +7,7 @@
 }
 
 .bg_btn_fr {
-  background-image: url("/assets/images/fr.webp");
+  background-image: url("/assets/images/lang/fr.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +21,7 @@
 }
 
 .bg_btn_en {
-  background-image: url("/assets/images/en.webp");
+  background-image: url("/assets/images/lang/en.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

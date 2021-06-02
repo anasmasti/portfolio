@@ -1,8 +1,8 @@
 .hero-section {
-  align-items: flex-start;
   display: flex;
+  align-items: flex-start;
+  justify-content: start;
   min-height: 100%;
-  justify-content: center;
   width: 80vw !important;
 }
 
@@ -13,18 +13,7 @@
   grid-row-gap: 24px;
   max-width: 1200px;
   width: 100%;
-}
-
-@media (min-width: 540px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  cursor: pointer;
 }
 
 .mycard {
@@ -82,4 +71,21 @@
   line-height: 1.1;
   word-spacing: 100vw;
   font-weight: 900;
+}
+
+form  input,textarea {
+  color: white;
+  background-color: #131313;
+}
+
+@media (min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -3,6 +3,10 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 // @ts-ignore
 import anime from 'animejs/lib/anime.js';
+import { DialogModalService } from 'src/app/services/dialog-modal.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ContactService } from 'src/app/services/contact.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,15 +14,46 @@ import anime from 'animejs/lib/anime.js';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
+  isSended: boolean = false
+  errorMessage: string = ''
+
+  // Set up contact form controls
+  contactForm = new FormGroup({
+    first_name: new FormControl(null, [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(30),
+    ]),
+    last_name: new FormControl(null, [
+      Validators.required,
+      Validators.minLength(3),
+    ]),
+    phone: new FormControl(),
+    email: new FormControl(null, [
+      Validators.email
+    ]),
+    message: new FormControl(null, [
+      Validators.required,
+      Validators.minLength(10),
+      Validators.maxLength(1200)
+    ]),
+  });
+
+
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private meta: Meta
-  ) {}
+    private meta: Meta,
+    public modalService: DialogModalService,
+    private contactService: ContactService
+  ) { }
 
   ngOnInit() {
+    // Change title of page
     this.title.setTitle('Contact - Anas Masti');
+
+    // Put some metatags
     this.meta.updateTag({
       name: 'description',
       content:
@@ -30,6 +65,7 @@ export class ContactComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'og:title', content: 'Contact - Anas Masti' });
 
+    // Lunch loading page 
     let myslide = this.document.getElementById('myslide');
 
     myslide?.setAttribute('style', 'display:flex');
@@ -60,4 +96,50 @@ export class ContactComponent implements OnInit {
       });
     }
   }
+
+  // Open the contact form 
+  openModal() {
+    this.modalService.open()
+  }
+
+  // Send message to database
+  onSubmit() {
+    // get data from form
+    let data: any = {
+      first_name: this.contactForm.get('first_name')?.value,
+      last_name: this.contactForm.get('last_name')?.value,
+      phone: this.contactForm.get('phone')?.value,
+      email: this.contactForm.get('email')?.value,
+      message: this.contactForm.get('message')?.value,
+    }
+    // convert data to json for submit it
+    let dataToJson: any = JSON.stringify(data)
+    // call contact service to post data to the server
+    this.contactService.sendContactMessage(dataToJson).subscribe(() => {
+      this.isSended = true; // make sending statut true
+
+      // then close the modal after after done message 
+      setTimeout(() => {
+        this.modalService.close()
+        // clear form with statut
+        this.contactForm.reset() // reset form
+        this.isSended = false // make message done statut false
+      }, 1800);
+
+    }, (error) => this.errorMessage = error.error.message
+    )
+  }
+
+  // Get form contols for us'em on html
+  get first_name() { return this.contactForm.get('first_name'); }
+  get last_name() { return this.contactForm.get('last_name'); }
+  get phone() { return this.contactForm.get('phone'); }
+  get email() { return this.contactForm.get('email'); }
+  get message() { return this.contactForm.get('message'); }
+
+  // Check if all inputs has invalid errors
+  checkInputsValidation(targetInput: any) {
+    return targetInput?.invalid && (targetInput.dirty || targetInput.touched)
+  }
+
 }
