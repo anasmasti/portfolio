@@ -35,3 +35,8 @@
     display: flex;
     justify-content: center !important;
 }
+
+h2,
+h6 {
+    color: #eebc71;
+}

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { DialogModalComponent } from 'src/app/shared/modal/dialog-modal.component';
 import { HttpLoaderFactory } from '../../app.module';
-
+import { CommonModule } from '@angular/common';  
 
 @NgModule({
   declarations: [DialogModalComponent],
@@ -15,6 +15,7 @@ import { HttpLoaderFactory } from '../../app.module';
         deps: [HttpClient],
       },
     }),
+    CommonModule
   ],
   exports: [DialogModalComponent],
 })

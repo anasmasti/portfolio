@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { DialogModalService } from 'src/app/services/dialog-modal.service';
 
 @Component({
@@ -8,7 +8,9 @@ import { DialogModalService } from 'src/app/services/dialog-modal.service';
   encapsulation: ViewEncapsulation.None
 })
 export class DialogModalComponent implements OnInit {
-
+  @Input() project_name: string = '';
+  @Input() technologies_used: string = '';
+  @Input() link_of_project: string = '';
 
   constructor(public modalService: DialogModalService) { }
 

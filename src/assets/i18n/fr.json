@@ -41,7 +41,10 @@
     "matiplas": "Site Web Responsive",
     "mysys": "Site Web Responsive avec Dashboard",
     "copra": "Application Web E-Commerce",
-    "ps": "Applications Mobile",
+    "hijaby": "Application Mobile Pour Hijab Style",
+    "coastal": "Site Web Responsive",
+    "mediexperts_academy": "Site Web Responsive",
+    "m_global": "Tableau de bord pour gérer les sites Web",
     "projbtn": "contactez-moi"
   },
   "contact": {
@@ -82,7 +85,10 @@
     }
   },
   "modal": {
-    "text": "Bientôt Disponible.",
-    "btnmodal": "fermer"
+    "project": {
+      "soon": "Bientôt disponible.",
+      "watch-btn": "Regarder",
+      "techno": "Technologies utilisées"
+    }
   }
 }

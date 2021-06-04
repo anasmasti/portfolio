@@ -41,7 +41,10 @@
     "matiplas": "Responsive Website",
     "mysys": "Responsive Website with Dashboard",
     "copra": "E-Commerce Web Application",
-    "ps": "Mobile Applications",
+    "hijaby": "Mobile Application For Hijab Style",
+    "coastal": "Responsive Website",
+    "mediexperts_academy": "Responsive Website",
+    "m_global": "Dashboard for manage websites",
     "projbtn": "contacte me"
   },
   "contact": {
@@ -82,7 +85,10 @@
     }
   },
   "modal": {
-    "text": "Coming Soon.",
-    "btnmodal": "close"
+    "project": {
+      "soon": "Coming Soon.",
+      "watch-btn": "Watch",
+      "techno": "Technologies used"
+    }
   }
 }

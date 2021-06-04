@@ -12,6 +12,19 @@ import { DialogModalService } from 'src/app/services/dialog-modal.service';
   styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit {
+  project_name: string = '';
+  technologies_used: string = '';
+  link_of_project: string = '';
+
+  projects: any[] = [
+    { rcoz_techno: '' },
+    { mediexperts_techno: '' },
+    { matiplas_techno: '' },
+    { mysys_techno: '' },
+    { ps_techno: '' }
+  ]
+
+
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,
@@ -39,8 +52,27 @@ export class ProjectComponent implements OnInit {
     }, 1500);
   }
 
-  openModal() {
+  openModal(targetId: any) {
+    // Open modal on poject clicked
     this.modalService.open()
+    // Select project title
+    let targetTitle = this.document.querySelector(`#${targetId} div h3`)
+    // Select project link 
+    let targetLink = this.document.querySelector(`#${targetId} div span`)
+     // Select project technologies 
+    let targetTechno = this.document.querySelector(`#${targetId} div pre`)
+    // Get value of project title
+    let targetTitleContent = targetTitle?.textContent
+    // Get value of project link 
+    let targetLinkContent = targetLink?.textContent
+    // Get value of project technologies 
+    let targetTechnoContent = targetTechno?.textContent
+    // Put project title on modal
+    this.project_name = targetTitleContent || ''
+    // Put project link on modal
+    this.link_of_project = targetLinkContent || ''
+    // Put project technologies on modal
+    this.technologies_used = targetTechnoContent || ''
   }
 
 }
