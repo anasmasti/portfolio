@@ -26,7 +26,7 @@ const routes: Routes = [
       },
     }),
     DialogModalModule,
-    CommonModule
-  ]
+    CommonModule,
+  ],
 })
 export class ProjectModule {}
