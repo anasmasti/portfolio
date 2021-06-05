@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,7 +25,8 @@ const routes: Routes = [
         deps: [HttpClient],
       },
     }),
-    DialogModalModule
+    DialogModalModule,
+    CommonModule
   ]
 })
 export class ProjectModule {}

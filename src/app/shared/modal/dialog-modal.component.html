@@ -1,24 +1,7 @@
 <div id="dialogModal" class="modal">
     <div class="modal-content">
         <span class="close-icon" (click)='closeModal()'>&times;</span>
-        <div *ngIf="project_name !== '';then title" class="font_bold py-2"></div>
-        <ng-template #title>
-            <h2 class="font_bold py-2">{{project_name}}</h2>
-        </ng-template>
-
-        <div *ngIf="link_of_project == '';then soon else link"></div>
-        <ng-template #soon>
-            <h3 class="font_bold py-2">{{'modal.project.soon' | translate}}</h3>
-        </ng-template>
-        <ng-template #link>
-            <a href="{{link_of_project}}" class="btn myBtn text-light font_bold"
-                target="_blank">{{'modal.project.watch-btn' | translate}}</a>
-        </ng-template>
-
-        <div *ngIf="technologies_used !== ''" class="py-2 mt-5">
-            <h6 class="font_bold">{{'modal.project.techno' | translate}} :</h6>
-            <p>{{technologies_used}}</p>
-        </div>
+       
         <ng-content></ng-content>
     </div>
 </div>
