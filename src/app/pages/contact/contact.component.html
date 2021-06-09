@@ -58,7 +58,7 @@
             <div class="mb-3">
                 <label for="first_name" class="form-label">{{'contact.form.first_name' | translate}} <span class="badge text-danger">*</span></label>
                 <input type="text" required id="first_name" formControlName="first_name"
-                    [ngClass]="{'is-invalid': checkInputsValidation(first_name), 'is-valid': !checkInputsValidation(first_name) }"
+                    [ngClass]="{'is-invalid': checkInputsValidation(first_name), 'is-valid': !first_name?.invalid }"
                     class="form-control myBtn">
                 <div *ngIf='checkInputsValidation(first_name)'>
                     <p *ngIf="first_name?.errors?.required" class="text-danger">
@@ -76,7 +76,7 @@
             <div class="mb-3">
                 <label for="last_name" class="form-label">{{'contact.form.last_name' | translate}} <span class="badge text-danger">*</span></label>
                 <input type="text" class="form-control myBtn" id="last_name" formControlName="last_name"
-                    [ngClass]="{'is-invalid': checkInputsValidation(last_name), 'is-valid': !checkInputsValidation(last_name) }">
+                    [ngClass]="{'is-invalid': checkInputsValidation(last_name), 'is-valid': !last_name?.invalid }">
                 <div *ngIf='checkInputsValidation(last_name)'>
                     <p *ngIf="last_name?.errors?.required" class="text-danger">
                         {{'contact.form.validation.last_name.required' | translate}}
@@ -93,13 +93,13 @@
             <div class="mb-3">
                 <label for="phone" class="form-label">{{'contact.form.phone' | translate}}</label>
                 <input type="text" class="form-control myBtn" id="phone" formControlName="phone"
-                    [ngClass]="{'is-invalid': checkInputsValidation(phone), 'is-valid': !checkInputsValidation(phone) }">
+                    [ngClass]="{'is-invalid': checkInputsValidation(phone), 'is-valid': !phone?.invalid }">
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">{{'contact.form.email' | translate}}</label>
                 <input type="email" class="form-control myBtn" id="email" formControlName="email"
-                    [ngClass]="{'is-invalid': checkInputsValidation(email), 'is-valid': !checkInputsValidation(email) }">
+                    [ngClass]="{'is-invalid': checkInputsValidation(email), 'is-valid': !email?.invalid }">
                 <div *ngIf='checkInputsValidation(email)'>
 
                     <p *ngIf="email?.errors?.email" class="text-danger">
@@ -112,7 +112,7 @@
             <div class="mb-3">
                 <label for="message" class="form-label">{{'contact.form.message' | translate}} <span class="badge text-danger">*</span></label>
                 <textarea rows="10" class="form-control myBtn" id="message"
-                    [ngClass]="{'is-invalid': checkInputsValidation(message), 'is-valid': !checkInputsValidation(message) }"
+                    [ngClass]="{'is-invalid': checkInputsValidation(message), 'is-valid': !message?.invalid }"
                     formControlName="message"></textarea>
                 <div *ngIf='checkInputsValidation(message)'>
                     <p *ngIf="message?.errors?.required" class="text-danger">
