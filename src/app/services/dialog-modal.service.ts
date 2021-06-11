@@ -5,7 +5,6 @@ import { Inject, Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DialogModalService {
-  dialogModal = this.document.getElementById('dialogModal')
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
