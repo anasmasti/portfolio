@@ -1,5 +1,5 @@
 .main {
-    height: 80% !important;
+    height: calc(100vh - 12vh) !important;
     display: flex;
     align-items: center;
     margin-left: 150px !important;
@@ -9,9 +9,6 @@
 @media only screen and (max-width: 640px) {
     .main {
         margin-left: 80px !important;
-        padding: 0% 5px;
-        height: 80% !important;
-        display: flex;
-        align-items: initial;
+        align-items: flex-start;
     }
 }

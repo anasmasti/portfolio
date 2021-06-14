@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
     translate.setDefaultLang('fr');
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   useLanguage(language: string) {
     this.translate.use(language);
@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
       });
       anime({
         targets: '.logo',
-        translateY: ['-120px', 0],
+        translateY: ['-350px', 0],
         duration: 1350,
         easing: 'easeInOutExpo',
       });
