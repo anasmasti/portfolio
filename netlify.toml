@@ -2,8 +2,3 @@
     command = "npm run prerender"
     publish = "dist/portfolio/browser"
     base = "/"
-
-[[redirects]] 
-    from = "/*"
-    to = "/index.html"
-    status = 200

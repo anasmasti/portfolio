@@ -168,12 +168,9 @@
                         "browserTarget": "portfolio:build:production",
                         "serverTarget": "portfolio:server:production",
                         "routes": [
-                            "/",
-                            "/about",
-                            "/skill",
-                            "/project",
-                            "/contact"
-                        ]
+                            "/"
+                        ],
+                        "guessRoutes": false
                     },
                     "configurations": {
                         "production": {}
