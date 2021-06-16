@@ -1,30 +1,30 @@
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    src: url('assets/fonts/montserrat-v15-latin-regular.woff2') format('woff2');
+    src: url("assets/fonts/montserrat-v15-latin-regular.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    src: url('assets/fonts/montserrat-v15-latin-600.woff2') format('woff2');
+    src: url("assets/fonts/montserrat-v15-latin-600.woff2") format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 800;
-    src: url('assets/fonts/montserrat-v15-latin-800.woff2') format('woff2');
+    src: url("assets/fonts/montserrat-v15-latin-800.woff2") format("woff2");
     font-display: swap;
 }
 
 html,
 body {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -94,43 +94,6 @@ body {
     color: #ebca9c !important;
 }
 
-.forMobile {
-    visibility: hidden;
-    display: none !important;
-}
-
-@media only screen and (max-width: 800px) {
-    .forMobile {
-        display: flex !important;
-        visibility: visible;
-    }
-    .forDesktop {
-        display: none !important;
-    }
-}
-
-@media only screen and (min-width: 326px) and (max-width: 480px) {
-    .forMobile {
-        display: flex !important;
-        visibility: visible;
-    }
-    .forDesktop {
-        display: none !important;
-        visibility: hidden;
-    }
-}
-
-@media only screen and (max-width: 324px) {
-    .forMobile {
-        display: flex !important;
-        visibility: visible;
-    }
-    .forDesktop {
-        display: none !important;
-        visibility: hidden;
-    }
-}
-
 .myh1 {
     font-size: 60px;
     white-space: normal;
@@ -144,7 +107,7 @@ body {
 
 @media only screen and (min-width: 326px) and (max-width: 480px) {
     .myh1 {
-        font-size: 40px;
+        font-size: 35px;
     }
 }
 
