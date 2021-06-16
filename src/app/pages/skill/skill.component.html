@@ -1,67 +1,74 @@
-<h1 class="font_bold myh1">{{'skill.skilltitle' | translate}}</h1>
-<div class="my-4">
-    <div class="row ">
-        <div class="col-lg-2 col-12">
-            <h5 class="font_bold">{{'skill.front' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>JavaScript</li>
-                <li>Angular, NgRx</li>
-                <li>Vue JS, Vuex</li>
-                <li>Nuxt JS</li>
-                <li>Html 5, Css 3, Sass</li>
-                <li>Wordpress</li>
-            </ul>
+<div class='skills-main'>
+    <h1 class="font_bold myh1">{{'skill.skilltitle' | translate}}</h1>
+    <div class="my-4">
+        <div class="row ">
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.front' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>JavaScript</li>
+                    <li>Angular, NgRx</li>
+                    <li>Vue JS, Vuex</li>
+                    <li>Nuxt JS</li>
+                    <li>Html 5, Css 3, Sass</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.back' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>Node JS, Express JS</li>
+                    <li>Php</li>
+                    <li>Laravel MVC</li>
+                    <li>C#</li>
+                    <li>Asp.Net Core</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.cms' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>Wordpress</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.db' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>MongoDB</li>
+                    <li>MySQL</li>
+                    <li>Microsoft SQL Server</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.model' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>Unified Modeling Language</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-12">
+                <h5 class="font_bold">{{'skill.graph' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>Adobe XD</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Fnal Cut Pro x</li>
+                </ul>
+            </div>
         </div>
-        <div class="col-lg-2 col-12">
-            <h5 class="font_bold">{{'skill.back' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>Node JS, Express JS</li>
-                <li>Php</li>
-                <li>Laravel MVC</li>
-                <li>C#</li>
-                <li>Asp.Net Core</li>
-            </ul>
-        </div>
-        <div class="col-lg-2 col-12">
-            <h5 class="font_bold">{{'skill.db' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>MongoDB</li>
-                <li>MySQL</li>
-                <li>Microsoft SQL Server</li>
-            </ul>
-        </div>
-        <div class="col-lg-2 col-12">
-            <h5 class="font_bold">{{'skill.model' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>Unified Modeling Language</li>
-            </ul>
-        </div>
-        <div class="col-lg-4 col-12">
-            <h5 class="font_bold">{{'skill.graph' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>Adobe XD</li>
-                <li>Adobe Photoshop</li>
-                <li>Fnal Cut Pro x</li>
-            </ul>
+        <div class="row">
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.bureautique' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>Microsoft Excel</li>
+                    <li>Microsoft Word</li>
+                    <li>Microsoft Powerpoint</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h5 class="font_bold">{{'skill.version' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-2 col-12">
-            <h5 class="font_bold">{{'skill.bureautique' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>Microsoft Excel</li>
-                <li>Microsoft Word</li>
-                <li>Microsoft Powerpoint</li>
-            </ul>
-        </div>
-        <div class="col-lg-2 col-12">
-            <h5 class="font_bold">{{'skill.version' | translate}}</h5>
-            <ul class="list-unstyled">
-                <li>Git</li>
-                <li>GitHub</li>
-            </ul>
-        </div>
-    </div>
+    <a [routerLink]="['/project']"
+        class="btn bg-transparent text-light myBtn font_bold mt-1 font_small mb-5">{{'skill.skillbtn' | translate}} </a>
 </div>
-<a [routerLink]="['/project']"
-    class="btn bg-transparent text-light myBtn font_bold mt-1 font_small mb-5">{{'skill.skillbtn' | translate}} </a>
