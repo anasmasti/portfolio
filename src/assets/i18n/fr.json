@@ -11,7 +11,7 @@
     "mynameis": "Je m'appelle",
     "im": "Je suis",
     "webdev": "Développeur Web Full-Stack",
-    "homebtn": "savoir plus sur moi"
+    "homebtn": "Savoir plus sur moi"
   },
   "about": {
     "abouttitle": "À propos de moi",
@@ -21,7 +21,16 @@
     "pres1": "passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",
     "pres2": "J'aime partager mes compétences et mes connaissances avec les personnes qui ont la même passion.",
     "pres3": "Enfin je suis fortement intéressé par le secteur de développement informatique, et très attiré par la nouvelle technologie.",
-    "aboutbtn": "voir mes compétences"
+    "form": {
+      "title": "Entrez la clé pour obtenir le CV",
+      "validation": {
+        "resume_key": {
+          "required": "Il faut saisir un key"
+        }
+      },
+      "button_donwload": "Télécharger le CV"
+    },
+    "aboutbtn": "Voir mes compétences"
   },
   "skill": {
     "skilltitle": "Compétences",
@@ -34,7 +43,7 @@
     "bureautique": "Bureautique",
     "version": "Gestion de Versions",
     "mobile": "Développement Mobile",
-    "skillbtn": "voir mes projets"
+    "skillbtn": "Voir mes projets"
   },
   "project": {
     "projecttitle": "Quelques Projets",
@@ -47,7 +56,7 @@
     "coastal": "Site Web Responsive",
     "mediexperts_academy": "Site Web Responsive",
     "m_global": "Tableau de bord pour gérer les sites Web",
-    "projbtn": "contactez-moi"
+    "projbtn": "Contactez-moi"
   },
   "contact": {
     "contacttitle": "Contact",

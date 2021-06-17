@@ -11,7 +11,7 @@
     "mynameis": "My name is",
     "im": "I'm",
     "webdev": "Full-Stack Web Developer",
-    "homebtn": "know more about me"
+    "homebtn": "Know more about me"
   },
   "about": {
     "abouttitle": "About me",
@@ -21,7 +21,16 @@
     "pres1": "passionate about creating websites with ergonomic and responsive qualities that can be adapted to any device.",
     "pres2": "I like to share my skills and knowledge with people who have the same passion.",
     "pres3": "I'm so interested in the IT development sector, and very attracted to new technology.",
-    "aboutbtn": "see my skills"
+    "form": {
+      "title": "Enter the key to get the resume",
+      "validation": {
+        "resume_key": {
+          "required": "You must enter a key"
+        }
+      },
+      "button_donwload": "Download the resume"
+    },
+    "aboutbtn": "See my skills"
   },
   "skill": {
     "skilltitle": "Skills",
@@ -34,7 +43,7 @@
     "bureautique": "Office Automation",
     "version": "Version Management",
     "mobile": "Mobile Development",
-    "skillbtn": "see my projects"
+    "skillbtn": "See my projects"
   },
   "project": {
     "projecttitle": "Some Projects",
@@ -47,7 +56,7 @@
     "coastal": "Responsive Website",
     "mediexperts_academy": "Responsive Website",
     "m_global": "Dashboard for manage websites",
-    "projbtn": "contacte me"
+    "projbtn": "Contacte me"
   },
   "contact": {
     "contacttitle": "Contact",

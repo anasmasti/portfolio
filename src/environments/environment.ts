@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:8080/api/'
+  API_URL: 'http://localhost:8080/api/',
+  API_VERSION: 'v1/',
+  API_KEY: '&&x-x-x-x-x-I-Love-Js-x-x-x-x-x&&',
+  RESUME_KEY: '#~~#Get&Anas&Masti&Resume#~~#'
 };
 
 /*

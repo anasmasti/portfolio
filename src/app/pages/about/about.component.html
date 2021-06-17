@@ -1,4 +1,5 @@
-<h1 class="font_bold myh1">{{'about.abouttitle' | translate}}</h1>
+<h1 class="font_bold myh1 d-inline">{{'about.abouttitle' | translate}}</h1>
+<button (click)='openModal()' class="btn text-light myBtn font_small float-right font_bold mr-2 mr-lg-5">{{'about.form.button_donwload' | translate}}</button>
 <p class="font_semibold my-4 p_aboutme" style="width: 85% ;">
     {{'about.mynameis' | translate}}
     <span class="myname">Anas MASTI</span>, {{'about.im' | translate}}
@@ -6,4 +7,10 @@
     {{'about.pres2' | translate}} <br><br> {{'about.pres3' | translate}}
 </p>
 <a [routerLink]="['/skill']"
-    class="btn bg-transparent text-light myBtn font_bold mt-3 font_small mb-5">{{'about.aboutbtn' | translate}} </a>
+    class="btn bg-transparent text-light myBtn font_bold mt-3 font_small mb-5">{{'about.aboutbtn' | translate}}</a>
+
+<app-dialog-modal>
+    <h2 class="font_bold py-2">{{'about.form.title' | translate}}</h2>
+    <input type="text" class="my-3" [(ngModel)]="resumeKeyAccess">
+    <button class="btn text-light myBtn font_bold font_small" (click)='downloadResume(resumeKeyAccess)' download>{{'about.form.button_donwload' | translate}}</button>
+</app-dialog-modal>

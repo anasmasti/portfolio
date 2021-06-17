@@ -103,7 +103,7 @@ export class ContactComponent implements OnInit {
   }
 
   // Send message to database
-  onSubmit() {
+  sendMessage() {
     // get data from form
     let data: any = {
       first_name: this.contactForm.get('first_name')?.value,
@@ -127,7 +127,15 @@ export class ContactComponent implements OnInit {
         this.errorMessage = ''
       }, 1800);
 
-    }, (error) => this.errorMessage = error.error.message
+    }, (error) => { 
+      // Put the server error to errorMessage variable to show it
+      this.errorMessage = error.error.message
+
+      // Hide the message error after 2 seconds
+      setTimeout(() => {
+        this.errorMessage = ''
+      }, 2000);
+    }
     )
   }
 

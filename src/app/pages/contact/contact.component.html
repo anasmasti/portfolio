@@ -50,11 +50,11 @@
     </div>
 
     <app-dialog-modal>
-        <h2><span class="badge bg-danger">{{errorMessage}}</span></h2>
-        <h2 *ngIf='isSended'><span class="badge bg-success">{{'contact.form.statut' | translate}}</span></h2>
+        <h5><span class="badge bg-danger">{{errorMessage}}</span></h5>
+        <h5 *ngIf='isSended'><span class="badge bg-success">{{'contact.form.statut' | translate}}</span></h5>
         <h2 class="font_bold py-2">{{'contact.form.title' | translate}}</h2>
 
-        <form [formGroup]="contactForm">
+        <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
             <div class="mb-3">
                 <label for="first_name" class="form-label">{{'contact.form.first_name' | translate}} <span class="badge text-danger">*</span></label>
                 <input type="text" required id="first_name" formControlName="first_name"
@@ -127,8 +127,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn text-light myBtn" [disabled]="!contactForm.valid"
-                (click)='onSubmit()'>{{'contact.form.btn_title' | translate}}</button>
+            <button type="submit" class="btn text-light myBtn font_bold font_small" [disabled]="!contactForm.valid">{{'contact.form.btn_title' | translate}}</button>
         </form>
     </app-dialog-modal>
 

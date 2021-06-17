@@ -13,9 +13,10 @@ export class ContactService {
 
   sendContactMessage(data: Contact): Observable<Contact> {
     try {
-      return this.http.post<Contact>(`${environment.API_URL}contact`, data, {
+      return this.http.post<Contact>(`${environment.API_URL + environment.API_VERSION}contact`, data, {
         headers: new HttpHeaders({
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Api-Key-Access': environment.API_KEY,
         })
       });
     } catch (error) {
