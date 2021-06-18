@@ -6,6 +6,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../app.module';
 import { AboutComponent } from './about.component';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [AboutComponent],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes),
     TranslateModule.forChild({
       loader: {

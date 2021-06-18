@@ -13,6 +13,14 @@ export class ResumeService {
 
   getResume(resumeKeyAccess: string) {
     let defaultResumeKeyAccess = environment.RESUME_KEY
+
+    // Check if the key come empty
+    if (resumeKeyAccess === '') throw new Error('Please enter the key');
+
+    // Check if the key not match with my access key
+    if (defaultResumeKeyAccess != resumeKeyAccess) throw new Error('Incorrect access key');
+
+    // Check if the key match with my access key and give the access to the resume
     if (defaultResumeKeyAccess == resumeKeyAccess) {
       return this.http.get(`${environment.API_URL + environment.API_VERSION}resume`, {
         headers: new HttpHeaders({
@@ -20,12 +28,11 @@ export class ResumeService {
         }),
         responseType: "blob"
       }).toPromise()
-        .then(async (blob) => {
-          await saveAs(blob, "anas_masti_cv.pdf");
+        .then((blob) => {
+          return saveAs(blob, "anas_masti_cv.pdf") // Download the resume
         })
-        .catch(err => console.error("Download error: ", err))
-    } else  {
-      return "You're not autorized to get the resume"
-   }
+    } else {
+      throw new Error("You're not autorized to get the resume")
+    }
   }
 }

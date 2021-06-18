@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { DialogModalService } from './../../services/dialog-modal.service';
 import { ResumeService } from './../../services/resume.service';
 import { DOCUMENT } from '@angular/common';
@@ -11,6 +12,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class AboutComponent implements OnInit {
   resumeKeyAccess!: string
+  resumeAccessError!: string
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,
@@ -41,7 +43,19 @@ export class AboutComponent implements OnInit {
   }
 
   downloadResume(resumeKeyAccess: string) {
-    this.resumeService.getResume(resumeKeyAccess)
+    try {
+      this.resumeService.getResume(resumeKeyAccess)
+      this.resumeKeyAccess = ''
+      setTimeout(() => {
+        this.modalService.close()
+      }, 500);
+
+    } catch (error) {
+      this.resumeAccessError = error.message;
+      setTimeout(() => {
+        this.resumeAccessError = ''
+      }, 2000);
+    }
   }
 
   openModal() {
