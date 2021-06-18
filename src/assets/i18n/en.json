@@ -95,6 +95,10 @@
       }
     }
   },
+  "notfound": {
+    "title": "Sorry, the page you are looking for couldn't be found.",
+    "bouton": "Back to Home"
+  },
   "modal": {
     "project": {
       "soon": "Coming Soon.",

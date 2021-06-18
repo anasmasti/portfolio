@@ -1,24 +1,22 @@
-import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NotfoundComponent } from './notfound.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpLoaderFactory } from '../../app.module';
-import { SkillComponent } from './skill.component';
-
+import { HttpLoaderFactory } from 'src/app/app.module';
+import { HttpClient } from '@angular/common/http';
 
 const routes: Routes = [
   {
     path: '',
-    component: SkillComponent
-  }
+    component: NotfoundComponent,
+  },
 ];
 
-
 @NgModule({
-  declarations: [
-    SkillComponent,
-  ],
+  declarations: [NotfoundComponent],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes),
     TranslateModule.forChild({
       loader: {
@@ -28,5 +26,4 @@ const routes: Routes = [
       }
     })],
 })
-
-export class SkillModule { }
+export class NotfoundModule { }

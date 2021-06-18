@@ -1,0 +1,30 @@
+h4:after {
+    content: "\1F61F";
+    margin-left: 5px;
+}
+
+h1 {
+    font-size: 260px !important;
+    margin-top: -12vh;
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 160px !important;
+        margin-top: -15vh;
+    }
+}
+
+@media only screen and (min-width: 326px) and (max-width: 480px) {
+    h1 {
+        font-size: 60px !important;
+        margin-top: 5vh;
+    }
+}
+
+@media only screen and (max-width: 324px) {
+    h1 {
+        font-size: 40px !important;
+        margin-top: 5vh;
+    }
+}

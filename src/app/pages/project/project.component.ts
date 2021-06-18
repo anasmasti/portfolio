@@ -12,14 +12,6 @@ export class ProjectComponent implements OnInit {
   technologies_used: string = '';
   link_of_project: string = '';
 
-  projects: any[] = [
-    { rcoz_techno: '' },
-    { mediexperts_techno: '' },
-    { matiplas_techno: '' },
-    { mysys_techno: '' },
-    { ps_techno: '' },
-  ];
-
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,

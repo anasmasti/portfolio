@@ -24,6 +24,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/project/project.module').then((m) => m.ProjectModule),
   },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./pages/notfound/notfound.module').then((m) => m.NotfoundModule),
+  },
 ];
 
 @NgModule({
@@ -34,4 +39,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

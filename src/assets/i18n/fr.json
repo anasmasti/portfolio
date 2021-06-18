@@ -95,6 +95,10 @@
       }
     }
   },
+  "notfound": {
+     "title": "Désolé, la page que vous cherchez est introuvable.",
+     "bouton": "Retour à l'accueil"
+  },
   "modal": {
     "project": {
       "soon": "Bientôt disponible.",
