@@ -28,8 +28,8 @@ export class ResumeService {
         }),
         responseType: "blob"
       }).toPromise()
-        .then((blob) => {
-          return saveAs(blob, "anas_masti_cv.pdf") // Download the resume
+        .then( async (blob) => {
+          return await saveAs(blob, "anas_masti_cv.pdf") // Download the resume
         })
     } else {
       throw new Error("You're not autorized to get the resume")
