@@ -1,12 +1,12 @@
 <div class="d-flex justify-content-center align-items-start flex-column mt-5 mt-lg-auto">
   <h1 class="font-bold pt-lg-3 main-h1 ml6">
     {{'home.hello' | translate}} <br> {{'home.my-name-is' | translate}}
-    <span class="my-name mytitle" #myName>Anas Masti</span>,<br> {{'home.im' | translate}}
-    <span class="my-name">{{'home.webdev' | translate}} </span>
+    <span class="my-name home-text" #myName>Anas Masti</span>,<br> {{'home.im' | translate}}
+    <span class="my-name">{{'home.job-title' | translate}} </span>
   </h1>
 
   <a [routerLink]="['/about']" class="btn bg-transparent text-light main-btn font-bold mt-5 font-small">
-    {{'home.homebtn' | translate}}
+    {{'home.button' | translate}}
   </a>
 
   <a [routerLink]="['/about']" aria-label="Down" class="btn text-light bg-transparent font-bold mt-3 mt-lg-5">

@@ -9,18 +9,18 @@
   "home": {
     "hello": "Hey,",
     "my-name-is": "My name is",
-    "im": "I'm",
-    "webdev": "Full-Stack Web Developer",
-    "homebtn": "Know more about me"
+    "im": "I'm a",
+    "job-title": "Full-Stack Web Developer",
+    "button": "Know more about me"
   },
   "about": {
-    "abouttitle": "About me",
-    "my-nameis": "My name is",
+    "title": "About me",
+    "my-name-is": "My name is",
     "im": "I'm a",
-    "webdevdes": "Developer Web Full-Stack and Designer",
-    "pres1": "passionate about creating websites with ergonomic and responsive qualities that can be adapted to any device.",
-    "pres2": "I like to share my skills and knowledge with people who have the same passion.",
-    "pres3": "I'm so interested in the IT development sector, and very attracted to new technology.",
+    "job-title": "Full-Stack Web Developer and Designer",
+    "description-1": "passionate about creating websites with ergonomic and responsive qualities that can be adapted to any device.",
+    "description-2": "I like to share my skills and knowledge with people who have the same passion.",
+    "description-3": "I'm so interested in the IT development sector, and very attracted to new technology.",
     "form": {
       "title": "Enter the key to get the resume",
       "validation": {
@@ -30,10 +30,10 @@
       },
       "button_donwload": "Download the resume"
     },
-    "aboutbtn": "See my skills"
+    "button": "See my skills"
   },
   "skill": {
-    "skilltitle": "Skills",
+    "title": "Skills",
     "front": "Front-end",
     "back": "Back-end",
     "cms": "Content Management System",
@@ -43,10 +43,10 @@
     "bureautique": "Office Automation",
     "version": "Version Management",
     "mobile": "Mobile Development",
-    "skillbtn": "See my projects"
+    "button": "See my projects"
   },
   "project": {
-    "projecttitle": "Some Projects",
+    "title": "Some Projects",
     "rcoz": "Responsive Website",
     "mediexperts": "Administrative Web Application",
     "matiplas": "Responsive Website",
@@ -56,10 +56,10 @@
     "coastal": "Responsive Website",
     "mediexperts_academy": "Responsive Website",
     "m_global": "Dashboard for manage websites",
-    "projbtn": "Contacte me"
+    "button": "Contacte me"
   },
   "contact": {
-    "contacttitle": "Contact",
+    "title": "Contact",
     "msg": "Hi Anas I saw your portfolio, i want to tell you that ",
     "card": {
       "title": "Direct"

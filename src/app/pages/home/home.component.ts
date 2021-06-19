@@ -57,14 +57,14 @@ export class HomeComponent implements OnInit {
         anime
           .timeline({ loop: false })
           .add({
-            targets: '.mytitle .el',
+            targets: '.home-text .el',
             translateY: ['-1.7em', 0],
             translateZ: 0,
             duration: 1250,
             delay: (el: any, i: any) => 50 * i,
           })
           .add({
-            targets: '.mytitle',
+            targets: '.home-text',
             duration: 1000,
             easing: 'easeOutExpo',
             delay: 100,
