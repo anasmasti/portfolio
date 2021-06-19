@@ -6,7 +6,6 @@ import anime from 'animejs/lib/anime.js';
 import { DialogModalService } from 'src/app/services/dialog-modal.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -14,8 +13,8 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  isSended: boolean = false
-  errorMessage: string = ''
+  isSended: boolean = false;
+  errorMessage: string = '';
 
   // Set up contact form controls
   contactForm = new FormGroup({
@@ -29,16 +28,13 @@ export class ContactComponent implements OnInit {
       Validators.minLength(3),
     ]),
     phone: new FormControl(),
-    email: new FormControl(null, [
-      Validators.email
-    ]),
+    email: new FormControl(null, [Validators.email]),
     message: new FormControl(null, [
       Validators.required,
       Validators.minLength(10),
-      Validators.maxLength(1200)
+      Validators.maxLength(1200),
     ]),
   });
-
 
   constructor(
     private title: Title,
@@ -47,7 +43,7 @@ export class ContactComponent implements OnInit {
     private meta: Meta,
     public modalService: DialogModalService,
     private contactService: ContactService
-  ) { }
+  ) {}
 
   ngOnInit() {
     // Change title of page
@@ -65,19 +61,19 @@ export class ContactComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'og:title', content: 'Contact - Anas Masti' });
 
-    // Lunch loading page 
-    let myslide = this.document.getElementById('myslide');
+    // Lunch loading page
+    let slide = this.document.getElementById('main-slide');
 
-    myslide?.setAttribute('style', 'display:flex');
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       anime.timeline({ loop: true }).add({
-        targets: '.myicon .el',
+        targets: '.down-icon .el',
         translateX: {
           value: '*=2.5', // 100px * 2.5 = '250px'
           duration: 1000,
@@ -97,9 +93,9 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  // Open the contact form 
+  // Open the contact form
   openModal() {
-    this.modalService.open()
+    this.modalService.open();
   }
 
   // Send message to database
@@ -111,44 +107,54 @@ export class ContactComponent implements OnInit {
       phone: this.contactForm.get('phone')?.value,
       email: this.contactForm.get('email')?.value,
       message: this.contactForm.get('message')?.value,
-    }
+    };
     // convert data to json for submit it
-    let dataToJson: any = JSON.stringify(data)
+    let dataToJson: any = JSON.stringify(data);
     // call contact service to post data to the server
-    this.contactService.sendContactMessage(dataToJson).subscribe(() => {
-      this.isSended = true; // make sending statut true
+    this.contactService.sendContactMessage(dataToJson).subscribe(
+      () => {
+        this.isSended = true; // make sending statut true
 
-      // then close the modal after after done message 
-      setTimeout(() => {
-        this.modalService.close()
-        // clear form with statut
-        this.contactForm.reset() // reset form
-        this.isSended = false // make message done statut false
-        this.errorMessage = ''
-      }, 1800);
+        // then close the modal after after done message
+        setTimeout(() => {
+          this.modalService.close();
+          // clear form with statut
+          this.contactForm.reset(); // reset form
+          this.isSended = false; // make message done statut false
+          this.errorMessage = '';
+        }, 1800);
+      },
+      (error) => {
+        // Put the server error to errorMessage variable to show it
+        this.errorMessage = error.error.message;
 
-    }, (error) => { 
-      // Put the server error to errorMessage variable to show it
-      this.errorMessage = error.error.message
-
-      // Hide the message error after 2 seconds
-      setTimeout(() => {
-        this.errorMessage = ''
-      }, 2000);
-    }
-    )
+        // Hide the message error after 2 seconds
+        setTimeout(() => {
+          this.errorMessage = '';
+        }, 2000);
+      }
+    );
   }
 
   // Get form contols for us'em on html
-  get first_name() { return this.contactForm.get('first_name'); }
-  get last_name() { return this.contactForm.get('last_name'); }
-  get phone() { return this.contactForm.get('phone'); }
-  get email() { return this.contactForm.get('email'); }
-  get message() { return this.contactForm.get('message'); }
+  get first_name() {
+    return this.contactForm.get('first_name');
+  }
+  get last_name() {
+    return this.contactForm.get('last_name');
+  }
+  get phone() {
+    return this.contactForm.get('phone');
+  }
+  get email() {
+    return this.contactForm.get('email');
+  }
+  get message() {
+    return this.contactForm.get('message');
+  }
 
   // Check if all inputs has invalid errors
   checkInputsValidation(targetInput: any) {
-    return targetInput?.invalid && (targetInput.dirty || targetInput.touched)
+    return targetInput?.invalid && (targetInput.dirty || targetInput.touched);
   }
-
 }

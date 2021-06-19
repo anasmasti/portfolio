@@ -8,14 +8,14 @@
   },
   "home": {
     "hello": "Hey,",
-    "mynameis": "My name is",
+    "my-name-is": "My name is",
     "im": "I'm",
     "webdev": "Full-Stack Web Developer",
     "homebtn": "Know more about me"
   },
   "about": {
     "abouttitle": "About me",
-    "mynameis": "My name is",
+    "my-nameis": "My name is",
     "im": "I'm a",
     "webdevdes": "Developer Web Full-Stack and Designer",
     "pres1": "passionate about creating websites with ergonomic and responsive qualities that can be adapted to any device.",

@@ -1,10 +1,11 @@
-.myicon {
-  color: #eebc71 !important;
+.down-icon {
+  color: #ebca9c !important;
   position: relative;
   display: flex;
   font-size: 50px;
 }
 
-.myicon:hover {
-  color: #ebca9c !important;
+.down-icon:hover {
+  color: #eebc71 !important;
+  
 }

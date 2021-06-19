@@ -21,7 +21,6 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('Projects - Anas Masti');
-    let myslide = this.document.getElementById('myslide');
     this.meta.updateTag({
       name: 'description',
       content:
@@ -33,9 +32,11 @@ export class ProjectComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'og:title', content: 'Projects - Anas Masti' });
 
-    myslide?.setAttribute('style', 'display:flex');
+    let slide = this.document.getElementById('main-slide');
+
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 

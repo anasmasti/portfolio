@@ -8,14 +8,14 @@
   },
   "home": {
     "hello": "Salut,",
-    "mynameis": "Je m'appelle",
+    "my-name-is": "Je m'appelle",
     "im": "Je suis",
     "webdev": "Développeur Web Full-Stack",
     "homebtn": "Savoir plus sur moi"
   },
   "about": {
     "abouttitle": "À propos de moi",
-    "mynameis": "Je m'appelle",
+    "my-nameis": "Je m'appelle",
     "im": "Je suis un",
     "webdevdes": "Développeur Web Full-Stack et Designer",
     "pres1": "passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",

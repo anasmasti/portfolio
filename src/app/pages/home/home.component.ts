@@ -38,11 +38,11 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({ name: 'og:url', content: 'https://anasmasti.com' });
     this.meta.updateTag({ name: 'og:title', content: 'Anas Masti' });
 
-    let myslide = this.document.getElementById('myslide');
+    let slide = this.document.getElementById('main-slide');
 
-    myslide?.setAttribute('style', 'display:flex');
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
           });
       }, 1300);
       anime({
-        targets: '.myicon',
+        targets: '.down-icon',
         translateY: [30, 0],
         easing: 'easeInOutQuad',
         direction: 'alternate',

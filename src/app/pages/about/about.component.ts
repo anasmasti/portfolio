@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { DialogModalService } from './../../services/dialog-modal.service';
 import { ResumeService } from './../../services/resume.service';
 import { DOCUMENT } from '@angular/common';
@@ -11,15 +10,15 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
-  resumeKeyAccess!: string
-  resumeAccessError!: string
+  resumeKeyAccess!: string;
+  resumeAccessError!: string;
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,
     private meta: Meta,
     private resumeService: ResumeService,
     public modalService: DialogModalService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.title.setTitle('About - Anas Masti');
@@ -34,31 +33,30 @@ export class AboutComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'og:title', content: 'About - Anas Masti' });
 
-    let myslide = this.document.getElementById('myslide');
+    let slide = this.document.getElementById('main-slide');
 
-    myslide?.setAttribute('style', 'display:flex');
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
   downloadResume(resumeKeyAccess: string) {
     try {
-      this.resumeService.getResume(resumeKeyAccess)
-      this.resumeKeyAccess = ''
+      this.resumeService.getResume(resumeKeyAccess);
+      this.resumeKeyAccess = '';
       setTimeout(() => {
-        this.modalService.close()
+        this.modalService.close();
       }, 500);
-
     } catch (error) {
       this.resumeAccessError = error.message;
       setTimeout(() => {
-        this.resumeAccessError = ''
+        this.resumeAccessError = '';
       }, 2000);
     }
   }
 
   openModal() {
-    this.modalService.open()
+    this.modalService.open();
   }
 }

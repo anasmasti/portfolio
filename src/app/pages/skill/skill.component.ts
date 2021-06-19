@@ -16,21 +16,22 @@ export class SkillComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('Skills - Anas Masti')
-    let myslide = this.document.getElementById('myslide');
     this.meta.updateTag({ name: 'description', content: "Salut, Je m'appelle Anas Masti, Je suis Développeur Web Full-Stack" })
     this.meta.updateTag({ name: 'og:url', content: 'https://anasmasti.com/skill' })
     this.meta.updateTag({ name: 'og:title', content: 'Skills - Anas Masti' })
-
-    myslide?.setAttribute('style', 'display:flex');
+    
+    let slide = this.document.getElementById('main-slide');
+    
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
     anime({
-      targets: '.myicon',
+      targets: '.down-icon',
       translateX: 10,
       direction: 'alternate',
       loop: true,

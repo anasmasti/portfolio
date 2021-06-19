@@ -1,4 +1,4 @@
-.myslideclass {
+.main-slide {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -23,7 +23,7 @@
   }
 }
 
-.leftslideclass {
+.left-slide {
   top: 0;
   left: 0;
   width: 50%;
@@ -34,7 +34,7 @@
   transform-origin: right;
 }
 
-.rightslideclass {
+.right-slide {
   top: 0;
   right: 0;
   position: absolute;
@@ -46,7 +46,7 @@
   transform-origin: left;
 }
 
-.rightlogo {
+.right-logo {
   width: 110px;
   height: 400px;
   top: 25%;
@@ -54,7 +54,7 @@
   position: absolute;
 }
 
-.leftlogo {
+.left-logo {
   width: 110px;
   height: 400px;
   top: 25%;

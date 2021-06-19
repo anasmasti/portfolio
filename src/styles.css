@@ -64,55 +64,55 @@ body {
     color: #f5f5f5 !important;
 }
 
-.font_bold {
+.font-bold {
     font-weight: 800 !important;
 }
 
-.font_semibold {
+.font-emibold {
     font-weight: 600 !important;
 }
 
-.font_normal {
+.font-normal {
     font-weight: 400 !important;
 }
 
-.font_small {
+.font-small {
     font-size: 12px !important;
 }
 
-.myBtn {
+.main-btn {
     border-color: #f1d6ab !important;
     border-style: solid !important;
     border-width: 2px !important;
 }
 
-.myBtn:hover {
+.main-btn:hover {
     border-color: #e3b04b !important;
 }
 
-.myname {
+.my-name {
     color: #ebca9c !important;
 }
 
-.myh1 {
+.main-h1 {
     font-size: 60px;
     white-space: normal;
 }
 
 @media only screen and (max-width: 800px) {
-    .myh1 {
+    .main-h1 {
         font-size: 50px;
     }
 }
 
 @media only screen and (min-width: 326px) and (max-width: 480px) {
-    .myh1 {
+    .main-h1 {
         font-size: 35px;
     }
 }
 
 @media only screen and (max-width: 324px) {
-    .myh1 {
+    .main-h1 {
         font-size: 24px;
     }
 }
