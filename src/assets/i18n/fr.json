@@ -8,19 +8,19 @@
   },
   "home": {
     "hello": "Salut,",
-    "mynameis": "Je m'appelle",
-    "im": "Je suis",
-    "webdev": "Développeur Web Full-Stack",
-    "homebtn": "Savoir plus sur moi"
+    "my-name-is": "Je m'appelle",
+    "im": "Je suis un",
+    "job-title": "Développeur Web Full-Stack",
+    "button": "Savoir plus sur moi"
   },
   "about": {
-    "abouttitle": "À propos de moi",
-    "mynameis": "Je m'appelle",
+    "title": "À propos de moi",
+    "my-name-is": "Je m'appelle",
     "im": "Je suis un",
-    "webdevdes": "Développeur Web Full-Stack et Designer",
-    "pres1": "passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",
-    "pres2": "J'aime partager mes compétences et mes connaissances avec les personnes qui ont la même passion.",
-    "pres3": "Enfin je suis fortement intéressé par le secteur de développement informatique, et très attiré par la nouvelle technologie.",
+    "job-title": "Développeur Web Full-Stack et Designer",
+    "description-1": "passionné par la création des sites web de qualités ergonomiques et responsive et adaptable sur n'importe quel appareil.",
+    "description-2": "J'aime partager mes compétences et mes connaissances avec les personnes qui ont la même passion.",
+    "description-3": "Enfin je suis fortement intéressé par le secteur de développement informatique, et très attiré par la nouvelle technologie.",
     "form": {
       "title": "Entrez la clé pour obtenir le CV",
       "validation": {
@@ -30,10 +30,10 @@
       },
       "button_donwload": "Télécharger le CV"
     },
-    "aboutbtn": "Voir mes compétences"
+    "button": "Voir mes compétences"
   },
   "skill": {
-    "skilltitle": "Compétences",
+    "title": "Compétences",
     "front": "Front-end",
     "back": "Back-end",
     "cms": "Système de Gestion de Contenu",
@@ -43,10 +43,10 @@
     "bureautique": "Bureautique",
     "version": "Gestion de Versions",
     "mobile": "Développement Mobile",
-    "skillbtn": "Voir mes projets"
+    "button": "Voir mes projets"
   },
   "project": {
-    "projecttitle": "Quelques Projets",
+    "title": "Quelques Projets",
     "rcoz": "Site Web Responsive",
     "mediexperts": "Application Web Administrative",
     "matiplas": "Site Web Responsive",
@@ -56,10 +56,10 @@
     "coastal": "Site Web Responsive",
     "mediexperts_academy": "Site Web Responsive",
     "m_global": "Tableau de bord pour gérer les sites Web",
-    "projbtn": "Contactez-moi"
+    "button": "Contactez-moi"
   },
   "contact": {
-    "contacttitle": "Contact",
+    "title": "Contact",
     "msg": "Salut Anas j'ai vu ton portfolio, je tiens à te dire que ",
     "card": {
       "title": "Direct"
@@ -96,8 +96,8 @@
     }
   },
   "notfound": {
-     "title": "Désolé, la page que vous cherchez est introuvable.",
-     "bouton": "Retour à l'accueil"
+    "title": "Désolé, la page que vous cherchez est introuvable.",
+    "bouton": "Retour à l'accueil"
   },
   "modal": {
     "project": {

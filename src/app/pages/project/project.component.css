@@ -9,13 +9,13 @@
   grid-gap: 24px;
 }
 
-.mycard {
+.main-card {
   list-style: none;
   position: relative;
   padding: auto;
 }
 
-.card__background {
+.main-card-background {
   background-size: cover;
   background-position: center;
   border-radius: 24px;
@@ -29,27 +29,27 @@
   transition: filter 200ms linear, transform 200ms linear;
 }
 
-.mycard:hover .card__background {
+.main-card:hover .main-card-background {
   transform: scale(1.05) translateZ(0);
 }
 
-.card-grid:hover > .mycard:not(:hover) .card__background {
+.card-grid:hover > .main-card:not(:hover) .main-card-background {
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
-.card__content {
+.main-card-content {
   position: relative;
   padding: 24px;
 }
 
-.card__category {
+.main-card-category {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
-.card__heading {
+.main-card-heading {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.9rem;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
@@ -88,7 +88,7 @@ pre {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .card__heading {
+  .main-card-heading {
     font-size: 1.4rem;
   }
   .project-main {

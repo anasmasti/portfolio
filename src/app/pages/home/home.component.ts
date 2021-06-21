@@ -38,11 +38,11 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({ name: 'og:url', content: 'https://anasmasti.com' });
     this.meta.updateTag({ name: 'og:title', content: 'Anas Masti' });
 
-    let myslide = this.document.getElementById('myslide');
+    let slide = this.document.getElementById('main-slide');
 
-    myslide?.setAttribute('style', 'display:flex');
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
@@ -57,21 +57,21 @@ export class HomeComponent implements OnInit {
         anime
           .timeline({ loop: false })
           .add({
-            targets: '.mytitle .el',
+            targets: '.home-text .el',
             translateY: ['-1.7em', 0],
             translateZ: 0,
             duration: 1250,
             delay: (el: any, i: any) => 50 * i,
           })
           .add({
-            targets: '.mytitle',
+            targets: '.home-text',
             duration: 1000,
             easing: 'easeOutExpo',
             delay: 100,
           });
       }, 1300);
       anime({
-        targets: '.myicon',
+        targets: '.down-icon',
         translateY: [30, 0],
         easing: 'easeInOutQuad',
         direction: 'alternate',

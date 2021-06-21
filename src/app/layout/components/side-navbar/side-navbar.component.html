@@ -1,5 +1,5 @@
-<div class="sidenav h-100 ">
-    <button aria-label="Menu" class="mymenu bg-transparent border-0" id="mymenu" (click)="menuchange();showFullMenu()"
+<div class="side-nav h-100 ">
+    <button aria-label="Menu" class="main-menu bg-transparent border-0" id="myMenu" (click)="menuchange();showFullMenu()"
         #myMenu>
         <div class="menuicon" id="menuicon">
             <div class="bar1"></div>
@@ -7,10 +7,10 @@
             <div class="bar3"></div>
         </div>
     </button>
-    <a href="#" aria-label="Fulscreen" class="fullscreenbtn" (click)="showFullscreen()">
+    <a href="#" aria-label="fullscreen" class="full-screen-btn" (click)="showFullscreen()">
         <span class="icon-expand"></span>
     </a>
-    <div class="items_menu">
+    <div class="items-menu">
         <a [routerLink]="['/']" aria-label="Home" routerLinkActive="router-link-active"
             [routerLinkActiveOptions]="{ exact: true }">
             <span class="icon-tag"></span>

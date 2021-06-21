@@ -31,16 +31,16 @@ export class SideNavbarComponent {
   }
 
   showFullMenu() {
-    let myfullMenu = this.document.getElementById('fullmenu');
+    let myfullMenu = this.document.getElementById('full-menu');
     if (!this.isShown) {
       myfullMenu?.setAttribute('style', 'display:flex');
       this.isShown = true;
     } else {
-      myfullMenu?.classList.add('hidefullmenu');
+      myfullMenu?.classList.add('hide-full-menu');
       this.isShown = false;
       setTimeout(() => {
         myfullMenu?.setAttribute('style', 'display:none');
-        myfullMenu?.classList.remove('hidefullmenu');
+        myfullMenu?.classList.remove('hide-full-menu');
       }, 1500);
     }
   }
@@ -52,19 +52,19 @@ export class SideNavbarComponent {
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       anime({
-        targets: '.items_menu',
+        targets: '.items-menu',
         translateX: ['-200%', 0],
         easing: 'easeInOutExpo',
         duration: 3950,
       });
       anime({
-        targets: '.mymenu',
+        targets: '.main-menu',
         translateX: ['-200%', 0],
         easing: 'easeInOutExpo',
         duration: 4800,
       });
       anime({
-        targets: '.fullscreenbtn',
+        targets: '.full-screen-btn',
         translateX: ['-200%', 0],
         easing: 'easeInOutExpo',
         duration: 4800,

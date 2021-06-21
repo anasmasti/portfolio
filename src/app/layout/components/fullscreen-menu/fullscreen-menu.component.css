@@ -1,4 +1,4 @@
-.fullmenu {
+.full-menu {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,17 +14,17 @@
   display: none;
 }
 
-.fullmenulist a {
+.full-menu-list a {
   color: #f5f5f5;
   font-size: 48px;
   font-weight: 800;
 }
 
-.fullmenulist a:hover {
+.full-menu-list a:hover {
   color: #eebc71;
 }
 
-.fullmenulist li {
+.full-menu-list li {
   list-style: none;
 }
 
@@ -37,7 +37,7 @@
   }
 }
 
-.hidefullmenu {
+.hide-full-menu {
   animation: hidefullmenuanimation 0.9s cubic-bezier(0.95, 0.05, 0.795, 0.035) 1
     forwards;
 }
@@ -52,19 +52,19 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .fullmenulist a {
+  .full-menu-list a {
     font-size: 40px;
   }
 }
 
 @media only screen and (min-width: 326px) and (max-width: 480px) {
-  .fullmenulist a {
+  .full-menu-list a {
     font-size: 30px;
   }
 }
 
 @media only screen and (max-width: 324px) {
-  .fullmenulist a {
+  .full-menu-list a {
     font-size: 30px;
   }
 }

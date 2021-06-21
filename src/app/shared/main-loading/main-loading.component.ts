@@ -10,9 +10,9 @@ export class MainLoadingComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
-    let myslide = this.document.getElementById('myslide');
+    let slide = this.document.getElementById('main-slide');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 }
