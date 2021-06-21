@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { DialogModalService } from './../../services/dialog-modal.service';
 import { ResumeService } from './../../services/resume.service';
 import { DOCUMENT } from '@angular/common';
@@ -10,15 +11,15 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
-  resumeKeyAccess!: string;
-  resumeAccessError!: string;
+  resumeKeyAccess!: string
+  resumeAccessError!: string
   constructor(
     private title: Title,
     @Inject(DOCUMENT) private document: Document,
     private meta: Meta,
     private resumeService: ResumeService,
     public modalService: DialogModalService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.title.setTitle('About - Anas Masti');
@@ -33,30 +34,34 @@ export class AboutComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'og:title', content: 'About - Anas Masti' });
 
-    let slide = this.document.getElementById('main-slide');
+    let myslide = this.document.getElementById('myslide');
 
-    slide?.setAttribute('style', 'display:flex');
+    myslide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      slide?.setAttribute('style', 'display:none');
+      myslide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
   downloadResume(resumeKeyAccess: string) {
     try {
-      this.resumeService.getResume(resumeKeyAccess);
-      this.resumeKeyAccess = '';
+      // Launch download resume from service
+      this.resumeService.getResume(resumeKeyAccess)
+      // Emty key input
+      this.resumeKeyAccess = ''
+      // Close the modal after 500ms 
       setTimeout(() => {
-        this.modalService.close();
+        this.modalService.close()
       }, 500);
+
     } catch (error) {
       this.resumeAccessError = error.message;
       setTimeout(() => {
-        this.resumeAccessError = '';
+        this.resumeAccessError = 'ddddd'
       }, 2000);
     }
   }
 
   openModal() {
-    this.modalService.open();
+    this.modalService.open()
   }
 }

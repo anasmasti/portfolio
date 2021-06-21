@@ -15,7 +15,7 @@ export class ResumeService {
     let defaultResumeKeyAccess = environment.RESUME_KEY
 
     // Check if the key come empty
-    if (resumeKeyAccess === '') throw new Error('Please enter the key');
+    if (resumeKeyAccess === '') throw new Error('Please enter the key'); 
 
     // Check if the key not match with my access key
     if (defaultResumeKeyAccess != resumeKeyAccess) throw new Error('Incorrect access key');
