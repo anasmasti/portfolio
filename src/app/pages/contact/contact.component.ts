@@ -6,7 +6,6 @@ import anime from 'animejs/lib/anime.js';
 import { DialogModalService } from 'src/app/services/dialog-modal.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
