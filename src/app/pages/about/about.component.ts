@@ -56,7 +56,7 @@ export class AboutComponent implements OnInit {
     } catch (error) {
       this.resumeAccessError = error.message;
       setTimeout(() => {
-        this.resumeAccessError = 'ddddd'
+        this.resumeAccessError = ''
       }, 2000);
     }
   }
