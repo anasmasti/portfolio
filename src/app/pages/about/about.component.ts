@@ -34,11 +34,12 @@ export class AboutComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'og:title', content: 'About - Anas Masti' });
 
-    let myslide = this.document.getElementById('myslide');
+    // Lunch loading page
+    let slide = this.document.getElementById('main-slide');
 
-    myslide?.setAttribute('style', 'display:flex');
+    slide?.setAttribute('style', 'display:flex');
     setTimeout(() => {
-      myslide?.setAttribute('style', 'display:none');
+      slide?.setAttribute('style', 'display:none');
     }, 1500);
   }
 
