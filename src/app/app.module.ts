@@ -12,6 +12,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainLoadingComponent } from './shared/main-loading/main-loading.component';
 import { FullscreenMenuComponent } from './layout/components/fullscreen-menu/fullscreen-menu.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { MainHeaderComponent } from './layout/components/main-header/main-header.component';
+import { MainContentComponent } from './layout/components/main-content/main-content.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,6 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainLoadingComponent,
     FullscreenMenuComponent,
     MainLayoutComponent,
+    MainHeaderComponent,
+    MainContentComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
