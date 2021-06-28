@@ -1,142 +1,145 @@
-<div class="project-main">
+<section>
 
-    <h1 class="font-bold d-inline main-h1">{{'project.title' | translate}}</h1>
-    <a [routerLink]="['/contact']"
-        class="btn bg-transparent text-light main-btn font-bold mr-5 mb-4 font-small float-right d-lg-block d-none">
-        {{'project.button' | translate}}
-    </a>
 
-    <section class="hero-section my-4 pr-5 ">
-        <div class="card-grid">
-            <a class="main-card" id="mysys" (click)="openModal('mysys')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/mysys.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">MySys</p>
-                    <h3 class="main-card-heading">{{'project.mysys' | translate}}</h3>
-                    <span>https://mysys-app.netlify.app/</span>
-                    <pre>Nuxt JS.</pre>
-                </div>
-            </a>
+    <div class="project-main">
 
-            <a class="main-card" id="m_global" (click)="openModal('m_global')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/m-global.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">MGlobal</p>
-                    <h3 class="main-card-heading">{{'project.m_global' | translate}}</h3>
-                    <span>https://dashboard.mysys.ma/</span>
-                    <pre>Laravel MVC - Vue JS.</pre>
-                </div>
-            </a>
+        <h1 class="font-bold d-inline main-h1">{{'project.title' | translate}}</h1>
+        <a [routerLink]="['/contact']"
+            class="btn bg-transparent text-light main-btn font-bold mr-5 mb-4 font-small float-right d-lg-block d-none">
+            {{'project.button' | translate}}
+        </a>
 
-            <a class="main-card" id="coastal" (click)="openModal('coastal')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/coastalwest-limousines.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Coastal West Limousines</p>
-                    <h3 class="main-card-heading">{{'project.coastal' | translate}}</h3>
-                    <span>https://coastalwestlimousines.com/</span>
-                    <pre>Wordpress.</pre>
-                </div>
-            </a>
+        <div class="hero-section my-4 pr-5 ">
+            <div class="card-grid">
+                <a class="main-card" id="mysys" (click)="openModal('mysys')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/mysys.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">MySys</p>
+                        <h3 class="main-card-heading">{{'project.mysys' | translate}}</h3>
+                        <span>https://mysys-app.netlify.app/</span>
+                        <pre>Nuxt JS.</pre>
+                    </div>
+                </a>
 
-            <a class="main-card" id="rcoz" (click)="openModal('rcoz')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/rcoz.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Rapide Club d'Oued-Zem</p>
-                    <h3 class="main-card-heading">{{'project.rcoz' | translate}}</h3>
-                    <span></span>
-                    <pre>Wordpress.</pre>
-                </div>
-            </a>
+                <a class="main-card" id="m_global" (click)="openModal('m_global')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/m-global.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">MGlobal</p>
+                        <h3 class="main-card-heading">{{'project.m_global' | translate}}</h3>
+                        <span>https://dashboard.mysys.ma/</span>
+                        <pre>Laravel MVC - Vue JS.</pre>
+                    </div>
+                </a>
 
-            <a class="main-card" id="mediexperts" (click)="openModal('mediexperts')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/mediexperts.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Mediexperts</p>
-                    <h3 class="main-card-heading">{{'project.mediexperts' | translate}}</h3>
-                    <span></span>
-                    <pre>Laravel MVC - Vue JS / Vuex.</pre>
-                </div>
-            </a>
+                <a class="main-card" id="coastal" (click)="openModal('coastal')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/coastalwest-limousines.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Coastal West Limousines</p>
+                        <h3 class="main-card-heading">{{'project.coastal' | translate}}</h3>
+                        <span>https://coastalwestlimousines.com/</span>
+                        <pre>Wordpress.</pre>
+                    </div>
+                </a>
 
-            <a class="main-card" id="matiplas" (click)="openModal('matiplas')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/matiplas.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Matiplas</p>
-                    <h3 class="main-card-heading">{{'project.matiplas' | translate}}</h3>
-                    <span>http://matiplas.ma/</span>
-                    <pre>Wordpress.</pre>
-                </div>
-            </a>
+                <a class="main-card" id="rcoz" (click)="openModal('rcoz')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/rcoz.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Rapide Club d'Oued-Zem</p>
+                        <h3 class="main-card-heading">{{'project.rcoz' | translate}}</h3>
+                        <span></span>
+                        <pre>Wordpress.</pre>
+                    </div>
+                </a>
 
-            <a class="main-card" id="mediexperts_academy" (click)="openModal('mediexperts_academy')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/mediexperts-academy.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Mediexperts Academy</p>
-                    <h3 class="main-card-heading">{{'project.mediexperts_academy' | translate}}</h3>
-                    <span>https://mediexperts-academy.netlify.app/</span>
-                    <pre>Angular / NgRx.</pre>
-                </div>
-            </a>
+                <a class="main-card" id="mediexperts" (click)="openModal('mediexperts')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/mediexperts.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Mediexperts</p>
+                        <h3 class="main-card-heading">{{'project.mediexperts' | translate}}</h3>
+                        <span></span>
+                        <pre>Laravel MVC - Vue JS / Vuex.</pre>
+                    </div>
+                </a>
 
-            <a class="main-card" id="copra" (click)="openModal('copra')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/copra.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Copra Shop</p>
-                    <h3 class="main-card-heading">{{'project.copra' | translate}}</h3>
-                    <span>https://copra.netlify.app/</span>
-                    <pre>Node JS - Angular.</pre>
-                </div>
-            </a>
+                <a class="main-card" id="matiplas" (click)="openModal('matiplas')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/matiplas.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Matiplas</p>
+                        <h3 class="main-card-heading">{{'project.matiplas' | translate}}</h3>
+                        <span>http://matiplas.ma/</span>
+                        <pre>Wordpress.</pre>
+                    </div>
+                </a>
 
-            <a class="main-card" id="hijaby" (click)="openModal('hijaby')">
-                <div class="main-card-background"
-                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/hijaby.webp)">
-                </div>
-                <div class="main-card-content">
-                    <p class="main-card-category">Hijaby</p>
-                    <h3 class="main-card-heading">{{'project.hijaby' | translate}}</h3>
-                    <span>https://play.google.com/store/apps/details?id=com.masti.hijaby&hl=fr&gl=US</span>
-                    <pre>Flutter.</pre>
-                </div>
-            </a>
+                <a class="main-card" id="mediexperts_academy" (click)="openModal('mediexperts_academy')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/mediexperts-academy.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Mediexperts Academy</p>
+                        <h3 class="main-card-heading">{{'project.mediexperts_academy' | translate}}</h3>
+                        <span>https://mediexperts-academy.netlify.app/</span>
+                        <pre>Angular / NgRx.</pre>
+                    </div>
+                </a>
+
+                <a class="main-card" id="copra" (click)="openModal('copra')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/copra.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Copra Shop</p>
+                        <h3 class="main-card-heading">{{'project.copra' | translate}}</h3>
+                        <span>https://copra.netlify.app/</span>
+                        <pre>Node JS - Angular.</pre>
+                    </div>
+                </a>
+
+                <a class="main-card" id="hijaby" (click)="openModal('hijaby')">
+                    <div class="main-card-background"
+                        style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/projects/hijaby.webp)">
+                    </div>
+                    <div class="main-card-content">
+                        <p class="main-card-category">Hijaby</p>
+                        <h3 class="main-card-heading">{{'project.hijaby' | translate}}</h3>
+                        <span>https://play.google.com/store/apps/details?id=com.masti.hijaby&hl=fr&gl=US</span>
+                        <pre>Flutter.</pre>
+                    </div>
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <app-dialog-modal>
-        <div *ngIf="project_name !== '';then title" class="font-bold py-2"></div>
-        <ng-template #title>
-            <h2 class="font-bold py-2">{{project_name}}</h2>
-        </ng-template>
+<app-dialog-modal>
+    <div *ngIf="project_name !== '';then title" class="font-bold py-2"></div>
+    <ng-template #title>
+        <h2 class="font-bold py-2">{{project_name}}</h2>
+    </ng-template>
 
-        <div *ngIf="link_of_project == '';then soon else link"></div>
-        <ng-template #soon>
-            <h3 class="font-bold py-2">{{'modal.project.soon' | translate}}</h3>
-        </ng-template>
-        <ng-template #link>
-            <a href="{{link_of_project}}" class="btn main-btn text-light font-bold font-small"
-                target="_blank">{{'modal.project.watch-btn' | translate}}</a>
-        </ng-template>
+    <div *ngIf="link_of_project == '';then soon else link"></div>
+    <ng-template #soon>
+        <h3 class="font-bold py-2">{{'modal.project.soon' | translate}}</h3>
+    </ng-template>
+    <ng-template #link>
+        <a href="{{link_of_project}}" class="btn main-btn text-light font-bold font-small"
+            target="_blank">{{'modal.project.watch-btn' | translate}}</a>
+    </ng-template>
 
-        <div *ngIf="technologies_used !== ''" class="py-2 mt-5">
-            <h6 class="font-bold">{{'modal.project.techno' | translate}} :</h6>
-            <p>{{technologies_used}}</p>
-        </div>
-    </app-dialog-modal>
-
-</div>
+    <div *ngIf="technologies_used !== ''" class="py-2 mt-5">
+        <h6 class="font-bold">{{'modal.project.techno' | translate}} :</h6>
+        <p>{{technologies_used}}</p>
+    </div>
+</app-dialog-modal>

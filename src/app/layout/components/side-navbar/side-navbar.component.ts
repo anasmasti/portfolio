@@ -31,7 +31,8 @@ export class SideNavbarComponent {
   }
 
   showFullMenu() {
-    let myfullMenu = this.document.getElementById('full-menu');
+    let myfullMenu = this.document.querySelector('#fullmenu');
+    
     if (!this.isShown) {
       myfullMenu?.setAttribute('style', 'display:flex');
       this.isShown = true;

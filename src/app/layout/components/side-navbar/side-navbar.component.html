@@ -1,35 +1,39 @@
-<div class="side-nav h-100 ">
-    <button aria-label="Menu" class="main-menu bg-transparent border-0" id="myMenu" (click)="menuchange();showFullMenu()"
-        #myMenu>
-        <div class="menuicon" id="menuicon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+<aside>
+    <div class="side-nav h-100">
+        <button aria-label="Menu" class="main-menu bg-transparent border-0" id="myMenu"
+            (click)="menuchange();showFullMenu()" #myMenu>
+            <div class="menuicon" id="menuicon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+        <a href="#" aria-label="fullscreen" class="full-screen-btn" (click)="showFullscreen()">
+            <span class="icon-expand"></span>
+        </a>
+        <div class="items-menu">
+            <a [routerLink]="['/']" aria-label="Home" routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <span class="icon-tag"></span>
+            </a>
+            <a [routerLink]="['/about']" aria-label="About" routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <span class="icon-user"></span>
+            </a>
+            <a [routerLink]="['/skill']" aria-label="Skill" routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <span class="icon-pencil2"></span>
+            </a>
+            <a [routerLink]="['/project']" aria-label="Project" routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <span class="icon-stack"></span>
+            </a>
+            <a [routerLink]="['/contact']" aria-label="Contact" routerLinkActive="router-link-active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <span class="icon-bubble"></span>
+            </a>
         </div>
-    </button>
-    <a href="#" aria-label="fullscreen" class="full-screen-btn" (click)="showFullscreen()">
-        <span class="icon-expand"></span>
-    </a>
-    <div class="items-menu">
-        <a [routerLink]="['/']" aria-label="Home" routerLinkActive="router-link-active"
-            [routerLinkActiveOptions]="{ exact: true }">
-            <span class="icon-tag"></span>
-        </a>
-        <a [routerLink]="['/about']" aria-label="About" routerLinkActive="router-link-active"
-            [routerLinkActiveOptions]="{ exact: true }">
-            <span class="icon-user"></span>
-        </a>
-        <a [routerLink]="['/skill']" aria-label="Skill" routerLinkActive="router-link-active"
-            [routerLinkActiveOptions]="{ exact: true }">
-            <span class="icon-pencil2"></span>
-        </a>
-        <a [routerLink]="['/project']" aria-label="Project" routerLinkActive="router-link-active"
-            [routerLinkActiveOptions]="{ exact: true }">
-            <span class="icon-stack"></span>
-        </a>
-        <a [routerLink]="['/contact']" aria-label="Contact" routerLinkActive="router-link-active"
-            [routerLinkActiveOptions]="{ exact: true }">
-            <span class="icon-bubble"></span>
-        </a>
     </div>
-</div>
+</aside>
+
+

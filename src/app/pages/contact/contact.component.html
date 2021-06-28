@@ -1,134 +1,141 @@
-<h1 class="font-bold main-h1">{{'contact.title' | translate}}</h1>
-<section class="hero-section my-4 pr-5 ">
-    <div class="card-grid">
-        <a class="main-card" data-bs-toggle="modal" (click)='openModal()'>
-            <div class="main-card-background"
-                style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/online.svg)">
-            </div>
-            <div class="main-card-content">
-                <p class="main-card-category">Message</p>
-                <h3 class="main-card-heading">{{'contact.card.title' | translate}}</h3>
-            </div>
-        </a>
-        <a class="main-card" target="_blank" href="https://wa.me/212660548100?text={{'contact.msg' | translate}}">
-            <div class="main-card-background"
-                style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/whatsapp.webp)">
-            </div>
-            <div class="main-card-content">
-                <p class="main-card-category">Message</p>
-                <h3 class="main-card-heading">WhatsApp</h3>
-            </div>
-        </a>
-        <a class="main-card" target="_blank" href="https://m.me/anas.masti.96">
-            <div class="main-card-background"
-                style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/messenger.webp)">
-            </div>
-            <div class="main-card-content">
-                <p class="main-card-category">Message</p>
-                <h3 class="main-card-heading">Facebook Messanger</h3>
-            </div>
-        </a>
-        <a class="main-card" target="_blank" href="https://t.me/anasmasti">
-            <div class="main-card-background"
-                style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/telegram.webp)">
-            </div>
-            <div class="main-card-content">
-                <p class="main-card-category">Message</p>
-                <h3 class="main-card-heading">Telegram</h3>
-            </div>
-        </a>
-        <a class="main-card" target="_blank"
-            href="mailto:anasmasti@hotmail.com?subject=Portfolio Contact&body={{'contact.msg' | translate}}">
-            <div class="main-card-background"
-                style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/mail.webp)">
-            </div>
-            <div class="main-card-content">
-                <p class="main-card-category">E-Mail</p>
-                <h3 class="main-card-heading">Mail</h3>
-            </div>
-        </a>
+<section>
+
+
+    <h1 class="font-bold main-h1">{{'contact.title' | translate}}</h1>
+    <div class="hero-section my-4 pr-5 ">
+        <div class="card-grid">
+            <a class="main-card" data-bs-toggle="modal" (click)='openModal()'>
+                <div class="main-card-background"
+                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/online.svg)">
+                </div>
+                <div class="main-card-content">
+                    <p class="main-card-category">Message</p>
+                    <h3 class="main-card-heading">{{'contact.card.title' | translate}}</h3>
+                </div>
+            </a>
+            <a class="main-card" target="_blank" href="https://wa.me/212660548100?text={{'contact.msg' | translate}}">
+                <div class="main-card-background"
+                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/whatsapp.webp)">
+                </div>
+                <div class="main-card-content">
+                    <p class="main-card-category">Message</p>
+                    <h3 class="main-card-heading">WhatsApp</h3>
+                </div>
+            </a>
+            <a class="main-card" target="_blank" href="https://m.me/anas.masti.96">
+                <div class="main-card-background"
+                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/messenger.webp)">
+                </div>
+                <div class="main-card-content">
+                    <p class="main-card-category">Message</p>
+                    <h3 class="main-card-heading">Facebook Messanger</h3>
+                </div>
+            </a>
+            <a class="main-card" target="_blank" href="https://t.me/anasmasti">
+                <div class="main-card-background"
+                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/telegram.webp)">
+                </div>
+                <div class="main-card-content">
+                    <p class="main-card-category">Message</p>
+                    <h3 class="main-card-heading">Telegram</h3>
+                </div>
+            </a>
+            <a class="main-card" target="_blank"
+                href="mailto:anasmasti@hotmail.com?subject=Portfolio Contact&body={{'contact.msg' | translate}}">
+                <div class="main-card-background"
+                    style="background-image:linear-gradient(#282b2b67,#2b2b2810), url(assets/images/contact/mail.webp)">
+                </div>
+                <div class="main-card-content">
+                    <p class="main-card-category">E-Mail</p>
+                    <h3 class="main-card-heading">Mail</h3>
+                </div>
+            </a>
+        </div>
     </div>
-
-    <app-dialog-modal>
-        <h5><span class="badge bg-danger">{{errorMessage}}</span></h5>
-        <h5 *ngIf='isSended'><span class="badge bg-success">{{'contact.form.statut' | translate}}</span></h5>
-        <h2 class="font-bold py-2">{{'contact.form.title' | translate}}</h2>
-
-        <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
-            <div class="mb-3">
-                <label for="first_name" class="form-label">{{'contact.form.first_name' | translate}} <span class="badge text-danger">*</span></label>
-                <input type="text" required id="first_name" formControlName="first_name"
-                    [ngClass]="{'is-invalid': checkInputsValidation(first_name), 'is-valid': !first_name?.invalid }"
-                    class="form-control main-btn">
-                <div *ngIf='checkInputsValidation(first_name)'>
-                    <p *ngIf="first_name?.errors?.required" class="text-danger">
-                        {{'contact.form.validation.first_name.required' | translate}}
-                    </p>
-                    <p *ngIf="first_name?.errors?.minlength" class="text-danger">
-                        {{'contact.form.validation.first_name.minlength' | translate}}
-                    </p>
-                    <p *ngIf="first_name?.errors?.maxlength" class="text-danger">
-                        {{'contact.form.validation.first_name.maxlength' | translate}}
-                    </p>
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="last_name" class="form-label">{{'contact.form.last_name' | translate}} <span class="badge text-danger">*</span></label>
-                <input type="text" class="form-control main-btn" id="last_name" formControlName="last_name"
-                    [ngClass]="{'is-invalid': checkInputsValidation(last_name), 'is-valid': !last_name?.invalid }">
-                <div *ngIf='checkInputsValidation(last_name)'>
-                    <p *ngIf="last_name?.errors?.required" class="text-danger">
-                        {{'contact.form.validation.last_name.required' | translate}}
-                    </p>
-                    <p *ngIf="last_name?.errors?.minlength" class="text-danger">
-                        {{'contact.form.validation.last_name.minlength' | translate}}
-                    </p>
-                    <p *ngIf="last_name?.errors?.maxlength" class="text-danger">
-                        {{'contact.form.validation.last_name.maxlength' | translate}}
-                    </p>
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="phone" class="form-label">{{'contact.form.phone' | translate}}</label>
-                <input type="text" class="form-control main-btn" id="phone" formControlName="phone"
-                    [ngClass]="{'is-invalid': checkInputsValidation(phone), 'is-valid': !phone?.invalid }">
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">{{'contact.form.email' | translate}}</label>
-                <input type="email" class="form-control main-btn" id="email" formControlName="email"
-                    [ngClass]="{'is-invalid': checkInputsValidation(email), 'is-valid': !email?.invalid }">
-                <div *ngIf='checkInputsValidation(email)'>
-
-                    <p *ngIf="email?.errors?.email" class="text-danger">
-                        {{'contact.form.validation.email.invalid' | translate}}
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="message" class="form-label">{{'contact.form.message' | translate}} <span class="badge text-danger">*</span></label>
-                <textarea rows="10" class="form-control main-btn" id="message"
-                    [ngClass]="{'is-invalid': checkInputsValidation(message), 'is-valid': !message?.invalid }"
-                    formControlName="message"></textarea>
-                <div *ngIf='checkInputsValidation(message)'>
-                    <p *ngIf="message?.errors?.required" class="text-danger">
-                        {{'contact.form.validation.message.required' | translate}}
-                    </p>
-                    <p *ngIf="message?.errors?.minlength" class="text-danger">
-                        {{'contact.form.validation.message.minlength' | translate}}
-                    </p>
-                    <p *ngIf="message?.errors?.maxlength" class="text-danger">
-                        {{'contact.form.validation.message.maxlength' | translate}}
-                    </p>
-                </div>
-            </div>
-
-            <button type="submit" class="btn text-light main-btn font-bold font-small" [disabled]="!contactForm.valid">{{'contact.form.btn_title' | translate}}</button>
-        </form>
-    </app-dialog-modal>
-
 </section>
+
+<app-dialog-modal>
+    <h5><span class="badge bg-danger">{{errorMessage}}</span></h5>
+    <h5 *ngIf='isSended'><span class="badge bg-success">{{'contact.form.statut' | translate}}</span></h5>
+    <h2 class="font-bold py-2">{{'contact.form.title' | translate}}</h2>
+
+    <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+        <div class="mb-3">
+            <label for="first_name" class="form-label">{{'contact.form.first_name' | translate}} <span
+                    class="badge text-danger">*</span></label>
+            <input type="text" required id="first_name" formControlName="first_name"
+                [ngClass]="{'is-invalid': checkInputsValidation(first_name), 'is-valid': !first_name?.invalid }"
+                class="form-control main-btn">
+            <div *ngIf='checkInputsValidation(first_name)'>
+                <p *ngIf="first_name?.errors?.required" class="text-danger">
+                    {{'contact.form.validation.first_name.required' | translate}}
+                </p>
+                <p *ngIf="first_name?.errors?.minlength" class="text-danger">
+                    {{'contact.form.validation.first_name.minlength' | translate}}
+                </p>
+                <p *ngIf="first_name?.errors?.maxlength" class="text-danger">
+                    {{'contact.form.validation.first_name.maxlength' | translate}}
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="last_name" class="form-label">{{'contact.form.last_name' | translate}} <span
+                    class="badge text-danger">*</span></label>
+            <input type="text" class="form-control main-btn" id="last_name" formControlName="last_name"
+                [ngClass]="{'is-invalid': checkInputsValidation(last_name), 'is-valid': !last_name?.invalid }">
+            <div *ngIf='checkInputsValidation(last_name)'>
+                <p *ngIf="last_name?.errors?.required" class="text-danger">
+                    {{'contact.form.validation.last_name.required' | translate}}
+                </p>
+                <p *ngIf="last_name?.errors?.minlength" class="text-danger">
+                    {{'contact.form.validation.last_name.minlength' | translate}}
+                </p>
+                <p *ngIf="last_name?.errors?.maxlength" class="text-danger">
+                    {{'contact.form.validation.last_name.maxlength' | translate}}
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">{{'contact.form.phone' | translate}}</label>
+            <input type="text" class="form-control main-btn" id="phone" formControlName="phone"
+                [ngClass]="{'is-invalid': checkInputsValidation(phone), 'is-valid': !phone?.invalid }">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">{{'contact.form.email' | translate}}</label>
+            <input type="email" class="form-control main-btn" id="email" formControlName="email"
+                [ngClass]="{'is-invalid': checkInputsValidation(email), 'is-valid': !email?.invalid }">
+            <div *ngIf='checkInputsValidation(email)'>
+
+                <p *ngIf="email?.errors?.email" class="text-danger">
+                    {{'contact.form.validation.email.invalid' | translate}}
+                </p>
+
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="message" class="form-label">{{'contact.form.message' | translate}} <span
+                    class="badge text-danger">*</span></label>
+            <textarea rows="10" class="form-control main-btn" id="message"
+                [ngClass]="{'is-invalid': checkInputsValidation(message), 'is-valid': !message?.invalid }"
+                formControlName="message"></textarea>
+            <div *ngIf='checkInputsValidation(message)'>
+                <p *ngIf="message?.errors?.required" class="text-danger">
+                    {{'contact.form.validation.message.required' | translate}}
+                </p>
+                <p *ngIf="message?.errors?.minlength" class="text-danger">
+                    {{'contact.form.validation.message.minlength' | translate}}
+                </p>
+                <p *ngIf="message?.errors?.maxlength" class="text-danger">
+                    {{'contact.form.validation.message.maxlength' | translate}}
+                </p>
+            </div>
+        </div>
+
+        <button type="submit" class="btn text-light main-btn font-bold font-small"
+            [disabled]="!contactForm.valid">{{'contact.form.btn_title' | translate}}</button>
+    </form>
+</app-dialog-modal>
