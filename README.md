@@ -1,4 +1,4 @@
 # Anas masti portfolio
 
-Technology used: 
+### Technology used: 
 - Angular
