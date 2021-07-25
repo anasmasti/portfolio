@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio ✨
 
 ### Technology used: 
 - Angular
