@@ -1,4 +1,3 @@
-# Portfolio ✨
+# Portfolio
 
-### Technology used: 
-- Angular
+> Link: https://anasmasti.com
