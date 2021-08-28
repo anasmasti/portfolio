@@ -14,6 +14,7 @@ import { FullscreenMenuComponent } from './layout/components/fullscreen-menu/ful
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { MainHeaderComponent } from './layout/components/main-header/main-header.component';
 import { MainContentComponent } from './layout/components/main-content/main-content.component';
+import { NgxJsonLdModule } from 'ngx-json-ld';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,7 +43,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    BrowserModule
+    BrowserModule,
+    NgxJsonLdModule
   ],
   providers: [],
   bootstrap: [AppComponent]
