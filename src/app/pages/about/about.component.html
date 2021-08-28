@@ -1,8 +1,15 @@
 <section>
-    <h1 class="font-bold main-h1 d-inline">{{'about.title' | translate}}</h1>
-    <button (click)='openModal()'
-        class="btn text-light main-btn font-small float-right font-bold mr-2 mr-lg-5">{{'about.form.button_donwload' |
-        translate}}</button>
+    <div class="d-flex justify-content-between flex-column flex-lg-row">
+        <div>
+            <h1 class="font-bold main-h1">{{'about.title' | translate}}</h1>
+        </div>
+        <div class="mr-lg-5 mt-3">
+            <button (click)='openModal()'
+                class="btn text-light main-btn font-bold ">{{'about.form.button_donwload' |
+                translate}}</button>
+        </div>
+
+    </div>
     <p class="font-emibold my-4 about-me-text">
         {{'about.my-name-is' | translate}}
         <span class="my-name">Anas MASTI</span>, {{'about.im' | translate}}

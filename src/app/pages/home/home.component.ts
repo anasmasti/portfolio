@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
       }, 1300);
       anime({
         targets: '.down-icon',
-        translateY: [30, 0],
+        translateY: [15, 0],
         easing: 'easeInOutQuad',
         direction: 'alternate',
         duration: 650,
