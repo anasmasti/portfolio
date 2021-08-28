@@ -10,32 +10,25 @@ nav {
   color: #eebc71;
 }
 
-.bg_btn_fr {
-  background-image: url("/assets/images/lang/fr.webp");
+.btn-lang {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 13px !important;
-  padding-right: 13px !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   border-color: #ebca9c !important;
   border-style: solid !important;
   border-width: 1.2px !important;
 }
 
-.bg_btn_en {
+.bg-btn-lang-fr {
+  background-image: url("/assets/images/lang/fr.webp");
+}
+
+.bg-btn-lang-en {
   background-image: url("/assets/images/lang/en.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-left: 13px !important;
-  padding-right: 13px !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  border-color: #ebca9c !important;
-  border-style: solid !important;
-  border-width: 1.2px !important;
 }
 
 .menuicon {

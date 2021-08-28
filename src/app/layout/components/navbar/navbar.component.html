@@ -1,23 +1,23 @@
 <nav
-    class="navbar navbar-expand-lg justify-content-lg-center justify-content-xl-center justify-content-start navbar-dark bg-transparant">
+    class="navbar navbar-expand-lg justify-content-lg-center justify-content-xl-center justify-content-between align-items-baseline navbar-dark bg-transparant">
     <ul class="navbar-nav ml-5 soc_media">
         <li class="nav-item">
-            <a aria-label="En" class="btn rounded-0 mr-2 bg-transparant border-0 ml-lg-5 bg_btn_en" name="en-btn"
+            <a aria-label="En" class="btn rounded-0 mr-2 bg-transparant border-0 ml-lg-5 btn-lang bg-btn-lang-en" name="en-btn"
                 (click)="useLanguage('en')"></a>
-            <a aria-label="Fr" class="btn rounded-0 bg-transparant border-0 bg_btn_fr" name="fr-btn"
+            <a aria-label="Fr" class="btn rounded-0 bg-transparant border-0 btn-lang bg-btn-lang-fr" name="fr-btn"
                 (click)="useLanguage('fr')"></a>
         </li>
     </ul>
 
     <ul
-        class="navbar-nav flex-fill flex-row justify-content-start justify-content-lg-center justify-content-xl-center soc_media ml-4">
+        class="navbar-nav flex-fill flex-row justify-content-end justify-content-lg-center justify-content-xl-center soc_media ml-4">
         <li class="nav-item">
             <a class="nav-link" aria-label="Facebook" rel="noopener" target="_blank"
                 href="https://www.facebook.com/anas.masti.96">
                 <span class="icon-facebook"></span>
             </a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-3 mx-lg-2">
             <a class="nav-link" aria-label="Twitter" rel="noopener" target="_blank"
                 href="https://twitter.com/AnasMasti">
                 <span class="icon-twitter"></span>
@@ -29,7 +29,7 @@
                 <span class="icon-linkedin"></span>
             </a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-3 mx-lg-2">
             <a class="nav-link" aria-label="WhatsApp" rel="noopener" target="_blank"
                 href="https://wa.me/212660548100?text={{'contact.msg' | translate}}">
                 <span class="icon-whatsapp"></span>
@@ -40,14 +40,14 @@
                 <span class="icon-send-o"></span>
             </a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-3 mx-lg-2">
             <a class="nav-link" aria-label="GitHub" rel="noopener" target="_blank" href="https://github.com/anasmasti">
                 <span class="icon-github"></span>
             </a>
         </li>
     </ul>
 
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto d-none d-lg-flex d-md-flex">
         <li class="nav-item">
             <a href="/" class="nav-link logo mr-lg-4"><img src="assets/images/logo/logo.webp" alt="Anas Masti Logo" width="30px" height="60px"></a>
         </li>
