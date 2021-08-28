@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        "Salut, Je m'appelle Anas Masti, Je suis Développeur Web Full-Stack",
+        "Salut, Je m'appelle Anas Masti, Je suis Développeur Web Full-Stack. Hey,My name is Anas Masti, I'm a Full-Stack Web Developer",
     });
     this.meta.updateTag({ name: 'og:url', content: 'https://anasmasti.com' });
     this.meta.updateTag({ name: 'og:title', content: 'Anas Masti' });
